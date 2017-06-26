@@ -5,7 +5,7 @@
   <prolog>
     <metadata>
       <keywords>
-        <indexterm>Document Type Association (Framework)<indexterm>Configuring content completion
+        <indexterm>Framework customization<indexterm>Configuring content completion
             proposals</indexterm></indexterm>
         <indexterm>Configuring content completion proposals</indexterm>
         <indexterm>Content completion configuration file (cc_config.xml)</indexterm>
@@ -14,24 +14,38 @@
   </prolog>
   <body>
     <p><ph keyref="product"/> includes support for configuring the proposed values that appear in
-      the <uicontrol>Content Completion Assistant</uicontrol>. To do so, a configuration file is
-      used, along with the associated schema, to add or replace possible values for attributes or
-      elements that are proposed in the <uicontrol>Content Completion Assistant</uicontrol>.</p>
-    <p>For an example of a specific use-case, suppose that you want the <uicontrol>Content
-        Completion Assistant</uicontrol> to propose several possible values for the language code
-      when you use an <codeph>xml:lang</codeph> attribute.</p>
+      the <xref keyref="glossentry_content-completion-assistant"><term>Content Completion
+          Assistant</term></xref>. To do so, a configuration file is used, along with the associated
+      schema, to add or replace possible values for attributes or elements that are proposed in the
+        <term>Content Completion Assistant</term>.</p>
+    <p>For an example of a specific use-case, suppose that you want the <term>Content Completion
+        Assistant</term> to propose several possible values for the language code when you use an
+        <codeph>xml:lang</codeph> attribute.</p>
     <section
-      conref="../reusables/topics/reusables-editing-documents.dita#reusables-editing-documents/how_to_configure_the_proposed_values_in_cc"
+      conkeyref="reusables-editing-documents/how_to_configure_the_proposed_values_in_cc"
       id="d2e47"/>
     <section id="configuration_file">
       <title>Configuring Proposed Values</title>
       <p>For the purposes of adding or replacing the values that are proposed, the configuration
         file (<filepath>cc_config.xml</filepath>) includes a series of <codeph>match</codeph>
-        instructions that will either match an element or attribute name. A new value is specified
-        inside one or more <codeph>item</codeph> elements, which are grouped inside an
-          <codeph>items</codeph> element. The behavior of the <codeph>items</codeph> element is
-        specified with the help of the <codeph>action</codeph> attribute, which can have any of the
-        following values:<ul id="ul_ghd_c55_kr">
+        instructions that will match an element or attribute name. You also have the possibility of
+        using an attribute called <codeph>editable</codeph> on the <codeph>match</codeph> element to
+        specify the editable state of the attribute values, as reflected in the <xref
+          href="author-attributes-view.dita#author-attributes-view"
+            ><uicontrol>Attributes</uicontrol> view</xref> and the <xref
+          href="author-attributes-view.dita#author-attributes-view/in-place-attr-editor"
+            ><uicontrol>In-place Attributes Editor</uicontrol></xref>. The possible values for the
+          <codeph>editable</codeph> attribute are:<ul>
+          <li><codeph>true</codeph> - The attribute values can be edited by choosing from a combo
+            box or manually providing a value.</li>
+          <li><codeph>false</codeph> - The attribute values cannot be edited.</li>
+          <li><codeph>onlyAllowedItems</codeph> - The attribute values can be edited, but only by
+            choosing from a list of proposed values, in a non-editable combo box.</li>
+        </ul></p>
+      <p>A new value is specified inside one or more <codeph>item</codeph> elements, which are
+        grouped inside an <codeph>items</codeph> element. The behavior of the <codeph>items</codeph>
+        element is specified with the help of the <codeph>action</codeph> attribute, which can have
+        any of the following values:<ul id="ul_ghd_c55_kr">
           <li><codeph>append</codeph> - Adds new values to appear in the proposals list (default
             value).</li>
           <li><codeph>addIfEmpty</codeph> - Adds new values to the proposals list only if no other
@@ -57,7 +71,8 @@
       <p>If you want to specify the values directly, the configuration file should look like
         this:</p>
       <p>
-        <codeblock outputclass="language-xml">&lt;!-- Replaces the values for an element with the local name "lg", from the given namespace -->
+        <codeblock outputclass="language-xml">&lt;!-- Replaces the values for an element with the local name "lg",
+      from the given namespace -->
 &lt;match elementName="lg" elementNS="http://www.oxygenxml.com/ns/samples">
     &lt;items action="replace">
         &lt;item value="stanza"/>
@@ -65,8 +80,9 @@
     &lt;/items>
 &lt;/match>
 
-&lt;!-- Adds two values for an attribute with the local name "type", from any namespace -->
-&lt;match attributeName="type">
+&lt;!-- Adds two values for an attribute with the local name "type",
+      from any namespace -->
+&lt;match attributeName="type" editable="onlyAllowedItems">
     &lt;items>
         &lt;item value="stanza"/>
         &lt;item value="refrain"/>
@@ -82,7 +98,10 @@
         <codeblock outputclass="language-xml">&lt;xslt href="../xsl/get_values_from_db.xsl" useCache="false" action="replace"/></codeblock>
       </p>
       <p>In this example, the <codeph>get_values_from_db.xsl</codeph> is executed to extract values
-        from a database.<note>A comprehensive XSLT sample is included in the <uicontrol>Content
+        from a database.<note type="tip">You can use <codeph>xsl:message</codeph> as a debugging
+          mechanism. These messages are presented in the results area at the bottom of the
+          application whenever the <term>Content Completion Assistant</term> is
+          invoked.</note><note>A comprehensive XSLT sample is included in the <uicontrol>Content
             Completion Configuration</uicontrol> file template.</note></p>
     </section>
     <section id="configuring_proposed_values_in_context">
@@ -125,19 +144,19 @@
   &lt;/xsl:template>
   
   &lt;xsl:template match="/">
-    &lt;xsl:variable name="propertyElement" 
-        select="saxon:eval(saxon:expression($contextElementXPathExpression, ./*))"/>
+   &lt;xsl:variable name="propertyElement" 
+    select="saxon:eval(saxon:expression($contextElementXPathExpression, ./*))"/>
     
-    &lt;items>
-      &lt;xsl:if test="$propertyElement/@name = 'color'">
-        &lt;item value='red'/>
-        &lt;item value='blue'/>  
-      &lt;/xsl:if>
-      &lt;xsl:if test="$propertyElement/@name = 'shape'">
-        &lt;item value='rectangle'/>
-        &lt;item value='square'/>  
-      &lt;/xsl:if>
-    &lt;/items>
+   &lt;items>
+     &lt;xsl:if test="$propertyElement/@name = 'color'">
+       &lt;item value='red'/>
+       &lt;item value='blue'/>  
+     &lt;/xsl:if>
+     &lt;xsl:if test="$propertyElement/@name = 'shape'">
+       &lt;item value='rectangle'/>
+       &lt;item value='square'/>  
+     &lt;/xsl:if>
+   &lt;/items>
   &lt;/xsl:template>
 &lt;/xsl:stylesheet></codeblock></p>
       <p>The <codeph>contextElementXPathExpression</codeph> parameter will be bound to an XPath
@@ -146,9 +165,7 @@
     </section>
   </body>
   <related-links>
-    <link
-      href="configure-elements-attr-cc-individually.dita#configure-elements-attr-cc-individually"/>
-    <link href="rendering-elements-cc-author.dita#rendering-elements-cc-author"
-      product="author editor authorEclipse editorEclipse"/>
+    <linklist><title>Related Information:</title><link href="configure-elements-attr-cc-individually.dita#configure-elements-attr-cc-individually"/><link href="rendering-elements-cc-author.dita#rendering-elements-cc-author" product="author editor authorEclipse editorEclipse"/></linklist>
+    
   </related-links>
 </topic>

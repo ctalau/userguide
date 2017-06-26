@@ -2,36 +2,105 @@
 <!DOCTYPE topic
   PUBLIC "-//OASIS//DTD DITA Topic//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/topic.dtd">
 <topic id="author-docbook5-doc-type">
-  <title>DocBook 5 Document Type</title>
+  <title>DocBook 5 Document Type (Framework)</title>
   <prolog>
     <metadata>
       <keywords>
-        <indexterm>Predefined Document Types<indexterm>DocBook 5</indexterm></indexterm>
+        <indexterm>Predefined frameworks<indexterm>DocBook 5</indexterm><indexterm>DocBook
+            5.1</indexterm></indexterm>
         <indexterm>DocBook 5 document type</indexterm>
+        <indexterm>DocBook 5.1 document type</indexterm>
       </keywords>
     </metadata>
   </prolog>
   <body>
-    <p>A file is considered to be a DocBook 5 document when the namespace is
-        <i>http://docbook.org/ns/docbook</i>.</p>
-    <p>The default schema that is used if one is not detected in the DocBook 5 file is
-        <filepath>docbookxi.rng</filepath> and it is stored in <filepath><term
-          conkeyref="reusables-user-guide/oxy-install-dir"/>/frameworks/docbook/5.0/rng/</filepath>.
-      Other types of schemas are also located in various folders inside the <filepath><term
-          conkeyref="reusables-user-guide/oxy-install-dir"/>/frameworks/docbook/5.0/</filepath>
-      directory (for example, XML Schema files are located in the <filepath>xsd</filepath>
-      folder).</p>
-    <p product="author authorEclipse editor editorEclipse">The default CSS files used for rendering
-      DocBook content in <uicontrol>Author</uicontrol> mode is stored in <filepath><term
-          conkeyref="reusables-user-guide/oxy-install-dir"/>/frameworks/docbook/css/</filepath>.</p>
-    <p>The default XML catalog, <filepath>catalog.xml</filepath>, is stored in <filepath><term
-          conkeyref="reusables-user-guide/oxy-install-dir"/>/frameworks/docbook/5.0/</filepath>.</p>
-    <note>A default XML catalog and schema files for experimental DocBook 5.1 documents are also
-      available in the <filepath><term conkeyref="reusables-user-guide/oxy-install-dir"
-        />/frameworks/docbook/5.1/</filepath> directory.</note>
-    <p product="author editor authorEclipse editorEclipse">To watch our video demonstration about
-      editing DocBook documents, go to <xref
-        href="http://oxygenxml.com/demo/DocBook_Editing_in_Author.html" format="html"
-        scope="external"/>.</p>
+    <p conkeyref="reusables-user-guide/docbook-intro-p"/>
+    <section id="file_definition">
+      <title>File Definition</title>
+      <p>A file is considered to be a DocBook 5 document when the namespace is
+          <i>http://docbook.org/ns/docbook</i>.</p>
+    </section>
+    <section id="document_templates">
+      <title>Default Document Templates</title>
+      <p>There are a variety of default <i>DocBook 5</i> templates available when creating <xref
+          href="new-dialog-sa.dita#new-dialog-sa" product="author developer editor">new documents
+          from templates</xref><xref href="creating-from-templates.dita#creating-from-templates"
+          product="authorEclipse developerEclipse editorEclipse">new documents from templates</xref>
+        and they can be found in: <menucascade>
+          <uicontrol>Framework Templates</uicontrol>
+          <uicontrol>DocBook 5</uicontrol>
+          <uicontrol>DocBook 5.0</uicontrol>
+        </menucascade> and <menucascade>
+          <uicontrol>Framework Templates</uicontrol>
+          <uicontrol>DocBook 5</uicontrol>
+          <uicontrol>DocBook 5.1</uicontrol>
+        </menucascade>.</p>
+      <p>New file templates for both DocBook 5 documents are located in the <filepath><term
+            conkeyref="reusables-user-guide/oxy-install-dir"
+          />/frameworks/docbook/templates/Docbook5.0</filepath> folder.</p>
+      <p>New file templates for both DocBook 5.1 documents are located in the <filepath><term
+            conkeyref="reusables-user-guide/oxy-install-dir"
+          />/frameworks/docbook/templates/Docbook5.1</filepath> folder. </p>
+    </section>
+    <section id="default_schema">
+      <title>Default Schema for Validation and Content Completion</title>
+      <p>The default schema that is used if one is not detected is
+          <filepath>docbookxi.rng</filepath> and it is stored in <filepath><term
+            conkeyref="reusables-user-guide/oxy-install-dir"
+          />/frameworks/docbook/5.0/rng/</filepath> (or for DocBook 5.1 in <filepath><term
+            conkeyref="reusables-user-guide/oxy-install-dir"
+          />/frameworks/docbook/5.1/rng/</filepath>). Other types of schemas for various DocBook
+        versions are also located in various folders inside the <filepath><term
+            conkeyref="reusables-user-guide/oxy-install-dir"/>/frameworks/docbook/</filepath>
+        directory.</p>
+    </section>
+    <section product="author editor authorEclipse editorEclipse" id="default_css">
+      <title>Default CSS</title>
+      <p>The default CSS files used for rendering DocBook content in <uicontrol>Author</uicontrol>
+        mode is stored in <filepath><term conkeyref="reusables-user-guide/oxy-install-dir"
+          />/frameworks/docbook/css/</filepath>.</p>
+      <p>By default, these default CSS files are merged with any that are specified in the document.
+        For more information, see <xref
+          href="selecting-combining-multiple-css-styles.dita#selecting-combining-multiple-css-styles"
+        />.</p>
+    </section>
+    <section id="transformation_scenarios">
+      <title>Transformation Scenarios</title>
+      <p><ph keyref="product"/> includes numerous built-in DocBook transformation scenarios that
+        allow you to transform DocBook 5 documents to a variety of outputs, such as WebHelp, PDF,
+        HTML, HTML Chunk, XHTML, XHTML Chunk, EPUB, and Assembly (5.1). For more information, see
+        the <xref
+          href="author-docbook5-transformation-scenarios.dita#author-docbook5-transformation-scenarios"
+        /> section.</p>
+    </section>
+    <section id="resources">
+      <title>Resources</title>
+      <p>
+        <ul>
+          <li product="author editor authorEclipse editorEclipse"><xref
+              href="https://www.oxygenxml.com/demo/DocBook_Editing_Support.html" format="html"
+              scope="external">Oxygen Video Tutorial: Editing DocBook Documents in Author
+              Mode</xref></li>
+          <li><xref href="http://docbook.org/specs/" format="html" scope="external">DocBook 5.0 (and
+              older) Specifications</xref></li>
+          <li><xref href="http://docbook.org/specs/docbook-v5.1-csprd02.html" format="html"
+              scope="external">Docbook 5.1 Specifications</xref></li>
+          <li><xref href="http://tdg.docbook.org/tdg/5.1/docbook.html" format="html"
+              scope="external">DocBook 5.1: The Definitive Guide</xref></li>
+        </ul>
+      </p>
+    </section>
   </body>
+  <related-links>
+    <linklist>
+      <title>Related Information:</title>
+      <link href="editing-xml-documents-author.dita#editing-xml-documents-author"
+        product="author editor authorEclipse editorEclipse"/>
+      <link href="xml-editor-specific-actions.dita#xml-editor-specific-actions"/>
+      <link href="add-docbook-table.dita#add-docbook-table"
+        product="author editor authorEclipse editorEclipse"/>
+      <link href="author-docbook-assembly-doc-type.dita#author-docbook-assembly-doc-type"/>
+      <link href="author-docbook-topic-doc-type.dita#author-docbook-topic-doc-type"/>
+    </linklist>
+  </related-links>
 </topic>

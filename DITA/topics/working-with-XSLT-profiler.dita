@@ -15,8 +15,9 @@
   </prolog>
   <body>
     <p>Profiling activity is linked with debugging activity, so the first step in profiling is to
-      switch to the debugging perspective and follow the corresponding procedure for debugging (see
-        <xref href="../tasks/steps-in-typical-debug-process.dita"/>).</p>
+      switch to the debugging <xref keyref="glossentry_perspective"><term>perspective</term></xref>
+      and follow the corresponding procedure for debugging (see <xref
+        href="steps-in-typical-debug-process.dita"/>).</p>
     <p>Immediately after turning the profiler on two new information views are added to the current
       debugger <xref href="debug-info-view.dita">information views</xref>:</p>
     <ul>
@@ -68,6 +69,6 @@
       projects when running the profiling or use high values for Java VM options <codeph>-Xms</codeph> and <codeph>-Xmx</codeph>. If
       this does not help you can shorten your source XML file and try again.</note>
     <p>To watch our video demonstration about the XSLT/XQuery Profiler, go to <xref
-        href="http://oxygenxml.com/demo/XSLT_Profiling.html" format="html" scope="external"/>.</p>
+        href="https://www.oxygenxml.com/demo/XSLT_Profiling.html" format="html" scope="external"/>.</p>
   </body>
 </topic>

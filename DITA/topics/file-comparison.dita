@@ -9,7 +9,8 @@
         <indexterm>Compare Files tool</indexterm>
         <indexterm>Two-way file comparison</indexterm>
         <indexterm>Three-way file comparison</indexterm>
-        <indexterm>Diff Files tool</indexterm></keywords>
+        <indexterm>Diff Files tool</indexterm>
+      </keywords>
     </metadata>
   </prolog>
   <body>
@@ -23,21 +24,48 @@
         opened by running its executable file (<filepath>diffFiles.exe</filepath>) from the Syncro
         SVN Client installation folder. The functionality of this standalone tool is similar to the
           <xref href="diff-view.dita#diff-view">comparison feature in the Syncro SVN client</xref>
-        with a few slight differences in the interface and some options.</ph><fig>
+        with a few slight differences in the interface and some options.</ph></p>
+    <p>
+      <fig>
         <title>Compare Files Tool</title>
         <image href="../img/sa_compare_files1.png"/>
-      </fig></p>
+      </fig>
+    </p>
+    <section id="starting_the_tools_from_a_command_line">
+      <title>Starting the Tool from a Command Line</title>
+      <p>The file comparison tool can also be started by using command-line arguments. In the
+        installation folder there is an executable shell (<filepath>diffFiles.bat</filepath> on
+        Windows, <filepath>diffFiles.sh</filepath> on Unix/Linux,
+          <filepath>diffFilesMac.sh</filepath> on OS X). To specify the files to compare, you can
+        pass command-line arguments using the following construct:
+          <codeph>diffFiles.bat/diffFiles.sh/diffFilesMac.sh [path to left file] [path to right
+          file] [path to 3-way base file]</codeph>.</p>
+      <p>If three files are specified, the tool will start in the <xref
+          href="#file-comparison/threeway_comparisons" format="dita">3-way comparison mode</xref>.
+        If only two files are specified, the tool will start in the <xref
+          href="#file-comparison/twoway_comparisons">2-way comparison mode</xref>. The first
+        specified file will be added to the left panel in the comparison tool, the second file to
+        the right panel, and the optional third file will be the base (ancestor) file used for a
+        3-way comparison. If you pass only one argument, you are prompted to manually choose another
+        file.</p>
+      <p>If you want to launch the file comparison tool from an external application with specified
+        files and you want the file browsing tools at the top of both panels to be hidden, you
+        should use the <codeph>-ext</codeph> argument as the first command. There are some
+        additional arguments that are allowed and to see all the details for the command line
+        construct, type <userinput>diffFiles.bat --help</userinput> in the command line.</p>
+      <p>For example, to do a 3-way comparison on Windows, the command line might look like
+        this:<codeblock outputclass="language-ini">diffFiles.bat "c:\docs\file 1" "c:\docs\file 2" c:\docs\basefile</codeblock></p>
+      <note type="tip">If there are spaces in the path names, surround the paths with quotes.</note>
+    </section>
     <section id="twoway_comparisons">
       <title>Two-Way Comparisons</title>
       <p>The <uicontrol>Compare Files</uicontrol> tool can be used to compare the differences
         between two files or XML fragments.</p>
       <sectiondiv><b>Compare Files</b><p>To perform a two-way comparison, follow these steps:<ol>
             <li>Open a file in the left panel and the file you want to compare it to in the right
-              panel. <ph
-                conref="../reusables/topics/reusables-user-guide.dita#reusables-user-guide/specify-path"
-                  /><p><b>Step Result:</b> The selected files are opened in the two side-by-side
-                editors. A text perspective is used to offer a better view of the
-              differences.</p></li>
+              panel. <ph conkeyref="reusables-user-guide/specify-path"/><p><b>Step Result:</b> The
+                selected files are opened in the two side-by-side editors. A text editing mode is
+                used to offer a better view of the differences.</p></li>
             <li>To highlight the differences between the two files, click the <uicontrol><image
                   href="../img/DiffPerform16.png"/>Perform File Differencing</uicontrol> button from
               the toolbar.</li>
@@ -66,9 +94,9 @@
           highlighted in several colors, depending on the type of change, and dynamic lines connect
           the compared fragments in the middle section between the two panes. The highlighting
           colors can be customized in the <xref
-            href="preferences-diff-appearance.dita#preferences-diff-appearance"
-              ><uicontrol>Files Comparison / Appearance</uicontrol> preferences page</xref>, but the
-          default colors and their shades mean the following:<ul>
+            href="preferences-diff-appearance.dita#preferences-diff-appearance"><uicontrol>Files
+              Comparison / Appearance</uicontrol> preferences page</xref>, but the default colors
+          and their shades mean the following:<ul>
             <li><b>Pink</b> - Identifies modifications on either side.</li>
             <li><b>Gray</b> - Identifies an addition of a node in the left side (your outgoing
               changes).</li>
@@ -83,19 +111,18 @@
           paste the fragments you want to compare into each side, without selecting a file. If a
           file is already selected, you need to close it using the <uicontrol><image
               href="../img/CloseQuickFind16.png" id="image_j1h_vbh_5r"/>Close (<shortcut
-              conkeyref="reusable_oxygen_shortcuts_list/ctrl_w_shortcut"/>)</uicontrol> button,
+              conkeyref="reusable-oxygen-shortcuts-list/ctrl_w_shortcut"/>)</uicontrol> button,
           before pasting the fragments. If you save modified fragments, a dialog box opens that
           allows you to save the changes as a new document.</p></sectiondiv>
-      <sectiondiv
-        conref="../reusables/topics/reusables-tools.dita#reusables-tools/navigate-differences"/>
-      <sectiondiv conref="../reusables/topics/reusables-tools.dita#reusables-tools/editing-actions"/>
+      <sectiondiv conkeyref="reusables-tools/navigate-differences"/>
+      <sectiondiv conkeyref="reusables-tools/editing-actions"/>
       <sectiondiv id="two-way-diff-algorithms"><b>Two-Way Diff Algorithms</b><p><ph keyref="product"
           /> offers the following two-way diff algorithms to compare files or fragments:<ul>
-            <li conref="../reusables/topics/reusables-tools.dita#reusables-tools/auto"/>
-            <li conref="../reusables/topics/reusables-tools.dita#reusables-tools/characters"/>
-            <li conref="../reusables/topics/reusables-tools.dita#reusables-tools/words"/>
-            <li conref="../reusables/topics/reusables-tools.dita#reusables-tools/lines"/>
-            <li>
+            <li conkeyref="reusables-tools/auto"/>
+            <li conkeyref="reusables-tools/characters"/>
+            <li conkeyref="reusables-tools/words"/>
+            <li conkeyref="reusables-tools/lines"/>
+            <li id="syntax-aware-alg">
               <p>
                 <uicontrol>Syntax Aware</uicontrol> - Computes differences for known file types or
                 fragments. This algorithm splits the files or fragments into sequences of
@@ -108,7 +135,7 @@
                   (<filepath>.dtd</filepath>, <filepath>.ent</filepath>, <filepath>.mod</filepath>
                 extensions), TEXT file type (<filepath>.txt</filepath> extension), or PHP file type
                   (<filepath>.php</filepath> extension).</p>
-              <p> For example:<ul>
+              <p>For example:<ul>
                   <li>When comparing XML files or fragments, a token can be one of the following:<ul>
                       <li>The name of an XML tag</li>
                       <li>The <keyword>&lt;</keyword> character</li>
@@ -126,8 +153,8 @@
                     character.</li>
                 </ul></p>
             </li>
-            <li conref="../reusables/topics/reusables-tools.dita#reusables-tools/xml-fast"/>
-            <li conref="../reusables/topics/reusables-tools.dita#reusables-tools/xml-accurate"/>
+            <li conkeyref="reusables-tools/xml-fast"/>
+            <li conkeyref="reusables-tools/xml-accurate"/>
           </ul></p></sectiondiv>
     </section>
     <section id="threeway_comparisons">
@@ -135,27 +162,27 @@
       <p><ph keyref="product"/> also includes a three-way comparison feature to help you solve
         conflicts and merge changes between multiple modifications. It is especially helpful for
         teams who have multiple authors editing and committing the same documents. It provides a
-        comparison between a local change, a remote change, and the original base revision. Some
+        comparison between a local change, another change, and the original base revision. Some
         additional advantages include:<ul>
           <li>Visualize and merge content that was modified by you and another member of your
             team.</li>
           <li>Marks differences correctly even when the document structure is rearranged.</li>
           <li>Allows you to merge XML-relevant modifications.</li>
-        </ul><fig>
+        </ul></p>
+      <p>
+        <fig>
           <title>Three-Way Comparison</title>
-          <image href="../img/three-way-compare.png"/>
-        </fig></p>
+          <image href="../img/three-way-compare.png" placement="inline"/>
+        </fig>
+      </p>
       <sectiondiv><b>Compare Files</b><p>To perform a three-way comparison, follow these steps:<ol>
             <li>Open a file in the left panel and the file you want to compare it to in the right
-              panel. <ph
-                conref="../reusables/topics/reusables-user-guide.dita#reusables-user-guide/specify-path"
-                  /><p><b>Step Result:</b> The selected files are opened in the two side-by-side
-                editors. A text perspective is used to offer a better view of the
-              differences.</p></li>
+              panel. <ph conkeyref="reusables-user-guide/specify-path"/><p><b>Step Result:</b> The
+                selected files are opened in the two side-by-side editors. A text editing mode is
+                used to offer a better view of the differences.</p></li>
             <li>Click the <uicontrol><image href="../img/ThreeWayComparison16.png"/>Three-Way
                 Comparison</uicontrol> button on the toolbar and select the base file in the
-                <uicontrol>Ancestor</uicontrol> field. <ph
-                conref="../reusables/topics/reusables-user-guide.dita#reusables-user-guide/specify-path"
+                <uicontrol>Base</uicontrol> field. <ph conkeyref="reusables-user-guide/specify-path"
               /></li>
             <li>To highlight the differences, click the <uicontrol><image
                   href="../img/DiffPerform16.png"/>Perform File Differencing</uicontrol> button on
@@ -170,57 +197,72 @@
           </ol>The resulting comparison will show you differences between the two files, as well as
           differences between either of them and the base (ancestor) file. The line numbers on each
           side and colored marks on the right-side vertical stripe help you to quickly identify the
-          locations of the differences. Adjacent changes are grouped into blocks of changes.<fig>
+          locations of the differences. Adjacent changes are grouped into blocks of changes.</p><p>
+          <fig>
             <title>Three-Way Differences</title>
             <image href="../img/three-way-compare-source.png"/>
-          </fig></p></sectiondiv>
-      <sectiondiv
-        conref="../reusables/topics/reusables-tools.dita#reusables-tools/highlighting-colors"/>
-      <sectiondiv
-        conref="../reusables/topics/reusables-tools.dita#reusables-tools/navigate-differences"/>
-      <sectiondiv conref="../reusables/topics/reusables-tools.dita#reusables-tools/editing-actions"/>
+          </fig>
+        </p></sectiondiv>
+      <sectiondiv conkeyref="reusables-tools/highlighting-colors"/>
+      <sectiondiv conkeyref="reusables-tools/navigate-differences"/>
+      <sectiondiv conkeyref="reusables-tools/editing-actions"/>
       <sectiondiv><b>Three-Way Diff Algorithms</b><p><ph keyref="product"/> offers the following
           three-way diff algorithms to compare files:<ul>
-            <li conref="../reusables/topics/reusables-tools.dita#reusables-tools/auto"/>
-            <li conref="../reusables/topics/reusables-tools.dita#reusables-tools/lines"/>
-            <li conref="../reusables/topics/reusables-tools.dita#reusables-tools/xml-fast"/>
-            <li conref="../reusables/topics/reusables-tools.dita#reusables-tools/xml-accurate"/>
+            <li conkeyref="reusables-tools/auto"/>
+            <li conkeyref="reusables-tools/lines"/>
+            <li conkeyref="reusables-tools/xml-fast"/>
+            <li conkeyref="reusables-tools/xml-accurate"/>
           </ul></p></sectiondiv>
     </section>
     <section id="second_level_comparisons">
       <title>Second Level Comparisons</title>
-      <p><ph keyref="product"/> automatically performs a second level comparison for the
-          <uicontrol>Lines</uicontrol>, <uicontrol>XML Fast</uicontrol>, and <uicontrol>XML
-          Accurate</uicontrol> algorithms. After the first comparison is finished, the second level
-        comparisons are processed on text nodes using a word level comparison, meaning that it looks
-        for identical words. This second level comparison makes it easier to spot precise
-        differences and you can merge or reject the precise modifications.<fig>
+      <p>For both two-way and three-way comparisons, <ph keyref="product"/> automatically performs a
+        second level comparison for the <uicontrol>Lines</uicontrol>, <uicontrol>XML
+          Fast</uicontrol>, and <uicontrol>XML Accurate</uicontrol> algorithms. After the first
+        comparison is finished, the second level comparisons for the <uicontrol>Lines</uicontrol>
+        algorithm is processed on text nodes using a word level comparison, meaning that it looks
+        for identical words. For the <uicontrol>XML Fast</uicontrol> and <uicontrol>XML
+          Accurate</uicontrol> algorithms, the second level comparison is processed using a <xref
+          href="#file-comparison/syntax-aware-alg" format="dita">syntax-aware comparison</xref>,
+        meaning that it looks for identical <i>tokens</i>. This second level comparison makes it
+        easier to spot precise differences and you can merge or reject the precise
+        modifications.</p>
+      <p>
+        <fig>
           <title>Second Level Diff Comparison</title>
           <image href="../img/second-level-comparison.png"/>
-        </fig></p>
+        </fig>
+      </p>
       <note>If a modified text fragment contains XML markup (such as processing instructions, XML
         comments, CData, or elements), the second level comparison will not automatically be
         performed. In this case you can manually select a second level comparison by doing a word
         level or character level comparison.<p>To do a word level comparison, select <uicontrol>Show
             word level details</uicontrol> from the contextual menu or
-            <uicontrol>Compare</uicontrol> menu.<fig>
+            <uicontrol>Compare</uicontrol> menu.</p><p>
+          <fig>
             <title>Word Level Comparison</title>
             <image href="../img/sa_compare_files_word.png"/>
-          </fig></p><p>To do a character level comparison, select <uicontrol>Show Character Level
-            details</uicontrol> from the contextual menu or <uicontrol>Compare</uicontrol> menu.<fig>
+          </fig>
+        </p><p>To do a character level comparison, select <uicontrol>Show Character Level
+            details</uicontrol> from the contextual menu or <uicontrol>Compare</uicontrol> menu.</p><p>
+          <fig>
             <title>Character Level Comparison</title>
             <image href="../img/sa_compare_files_char.png"/>
-          </fig></p></note>
+          </fig>
+        </p></note>
     </section>
   </body>
   <related-links>
-    <link href="preferences-diff-files.dita#preferences-diff-files"
-      product="author developer editor">
-      <linktext>Files Comparison Preferences Page</linktext>
-    </link>
-    <link href="preferences-svn-diff.dita#preferences-svn-diff" product="svnClient">
-      <linktext>Diff Preferences Page</linktext>
-    </link>
-    <link href="directories-comparison.dita#directories-comparison"/>
+    <linklist>
+      <title>Related Information:</title>
+      <link href="preferences-diff-files.dita#preferences-diff-files"
+        product="author developer editor">
+        <linktext>Files Comparison Preferences Page</linktext>
+      </link>
+      <link href="preferences-svn-diff.dita#preferences-svn-diff" product="svnClient">
+        <linktext>Diff Preferences Page</linktext>
+      </link>
+      <link href="directories-comparison.dita#directories-comparison"/>
+    </linklist>
   </related-links>
 </topic>

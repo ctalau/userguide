@@ -3,11 +3,14 @@
   PUBLIC "-//OASIS//DTD DITA Topic//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/topic.dtd">
 <topic id="documentation-XSLT-Stylesheet-command-line">
     <title>Generating XSLT Documentation From the Command-Line Interface</title>
-    <prolog>
+  <prolog>
     <metadata>
-      <keywords><indexterm>Editing XSLT Stylesheets<indexterm>generate documentation for XSLT
-                        Stylesheets<indexterm>from command
-            line</indexterm></indexterm></indexterm></keywords>
+      <keywords>
+        <indexterm>XSLT<indexterm>Generate documentation for XSLT stylesheets<indexterm>From command
+              line</indexterm></indexterm></indexterm>
+        <indexterm>Generate XSLT Stylesheet Documentation tool<indexterm>From command
+            line</indexterm></indexterm>
+      </keywords>
     </metadata>
   </prolog>
     <body>
@@ -21,9 +24,7 @@
         <p>The command-line parameter of the script is the relative path to the exported XML
       settings file. The files that are specified with relative paths in the exported XML settings
       are resolved relative to the script directory.</p>
-        <example>
-            <title>Example of an XML Configuration File </title>
-            <codeblock outputclass="language-xml">&lt;serialized&gt;
+    <p><b><u>Example:</u></b><codeblock outputclass="language-xml">&lt;serialized&gt;
     &lt;map&gt;
         &lt;entry&gt;
             &lt;String xml:space="preserve"&gt;xsd.documentation.options&lt;/String&gt;
@@ -130,7 +131,6 @@
             &lt;/xsdDocumentationOptions&gt;
         &lt;/entry&gt;
     &lt;/map&gt;
-&lt;/serialized&gt;</codeblock>
-        </example>
+&lt;/serialized&gt;</codeblock></p>
     </body>
 </topic>

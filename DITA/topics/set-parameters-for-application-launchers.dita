@@ -30,10 +30,11 @@
         </ul></p>
       <p>Restart <ph keyref="product"/>. Go to <menucascade>
           <uicontrol>Help</uicontrol>
-          <uicontrol> About</uicontrol>
-        </menucascade> and verify the amount of memory that is actually available (see the last row
-        in the <uicontrol>About</uicontrol> dialog box). If <ph keyref="product"/> does not start
-        and you receive and error message saying that it could not start the JVM, decrease the
+          <uicontrol>About</uicontrol>
+        </menucascade> and verify the amount of memory that is actually available (see the
+          <uicontrol>JVM Memory Used</uicontrol> in the last row in the
+          <uicontrol>Copyright</uicontrol> tab). If <ph keyref="product"/> does not start and you
+        receive and error message saying that it could not start the JVM, decrease the
           <parmname>-Xmx</parmname> parameter and try again.</p>
       <p>For Windows Vista/7/8/10, copy the <ph product="editor"><filepath>oxygen<keyword
               keyref="minorVersion"/>.vmoptions</filepath></ph><ph product="author"
@@ -51,10 +52,8 @@
     <section id="increasing_the_amount_of_memory_that_uses_on_os_x">
       <title>Increasing the amount of memory that <ph keyref="product"/> uses on OS X</title>
       <p>To increase the memory available to <ph keyref="product"/> on OS X:<ul>
-          <li><uicontrol
-              conref="../reusables/topics/oxygen-shortcuts-list.dita#oxygen-shortcuts-list/ctrl_click"
-            /> (or right-click) the <ph keyref="product"/> icon in
-            <uicontrol>Finder</uicontrol>.</li>
+          <li><uicontrol conkeyref="reusable-oxygen-shortcuts-list/ctrl_click"/> (or right-click) the <ph
+              keyref="product"/> icon in <uicontrol>Finder</uicontrol>.</li>
           <li>From the contextual menu, select <uicontrol>Show Package Contents</uicontrol>.</li>
           <li>Go to the <filepath>contents</filepath> directory and edit the
               <filepath>Info.plist</filepath> file.<note>You can open this file either with the
@@ -62,10 +61,9 @@
               <uicontrol>TextEdit</uicontrol>.</note></li>
           <li>Look for the <uicontrol>VMOptions</uicontrol> key and adjust the
               <parmname>-Xmx</parmname> parameter to a larger value (for example,
-              <parmname>-Xmx1500m</parmname>)<note>For a Mac kit bundled with Java 8, look for the
-                <uicontrol>VMOptionArray</uicontrol> key and add the <parmname>-Xmx</parmname>
-              parameter in a new string <codeph>element</codeph> from the <codeph>array</codeph>
-              element. For example, for 1500 MB use the
+              <parmname>-Xmx1500m</parmname>)<note>For a Mac kit bundled with Java 8, look for the <uicontrol>VMOptionArray</uicontrol> key and
+              add the <parmname>-Xmx</parmname> parameter in a new string <codeph>element</codeph>
+              from the <codeph>array</codeph> element. For example, for 1500 MB use the
               following:<codeblock outputclass="language-ini">&lt;string>-Xmx1500m&lt;/string></codeblock></note><note
               type="tip">Try not to use more than half of your existing physical RAM if
               possible.</note></li>
@@ -75,7 +73,7 @@
       <title>Setting a system property</title>
       <p>To set a system property, edit the application launcher and add a parameter after the
           <codeph>%OXYGEN_JAVA%</codeph> token, using the following
-        form:<codeblock outputclass="language-ini"><b>-D</b><i>property.name</i>=<i>value</i></codeblock></p>
+        form:<codeblock><b>-D</b><i>property.name</i>=<i>value</i></codeblock></p>
       <p>You can also set a system property through a parameter prefixed with <codeph>-Doxy</codeph>
         in the command line used to start the
         application:<codeblock><ph keyref="executable"/> "<b>-Doxy</b><i>property.name</i>=<i>value</i>"</codeblock></p>
@@ -86,7 +84,7 @@
     </section>
     <section id="disabling_dpi_scaling">
       <title>Disabling DPI Scaling</title>
-      <p>Some users may prefer the look of smaller icons in a HiDPI display. To achieve this,
+      <p>Some users may prefer the look of smaller icons in an HiDPI display. To achieve this,
         display scaling needs to be disabled for high DPI settings. To disable the DPI scaling, set
         the following property in <codeph>.vmoptions</codeph> (or in the <codeph>.bat</codeph>
         script):<codeblock outputclass="language-ini">sun.java2d.dpiaware=false</codeblock></p>

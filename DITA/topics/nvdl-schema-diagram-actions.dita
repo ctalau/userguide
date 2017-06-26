@@ -5,8 +5,10 @@
   <title>Actions Available in the Diagram Editor</title>
   <prolog>
     <metadata>
-      <keywords><indexterm>Editing NVDL Schemas<indexterm>schema diagram<indexterm>actions in the
-            diagram view</indexterm></indexterm></indexterm></keywords>
+      <keywords>
+        <indexterm>NVDL schemas<indexterm>Diagram Editor<indexterm>Contextual menu
+              actions</indexterm></indexterm></indexterm>
+      </keywords>
     </metadata>
   </prolog>
   <body>
@@ -55,7 +57,8 @@
         </dlentry>
       </dl>
     </p>
-    <p>If the schema is not valid, you see only an error message in the <uicontrol>Logical Model
-        View</uicontrol> instead of the diagram.</p>
+    <p>If the schema is not valid, you see only an error message in the <xref
+        href="nvdl-logical-model.dita#nvdl-logical-model"><uicontrol>Logical Model
+        View</uicontrol></xref> instead of the diagram.</p>
   </body>
 </topic>

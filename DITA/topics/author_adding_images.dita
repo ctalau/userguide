@@ -5,7 +5,10 @@
   <prolog>
     <metadata>
       <keywords>
-        <indexterm>Insert Image</indexterm>
+        <indexterm>Author editing mode<indexterm>Inserting images</indexterm></indexterm>
+        <indexterm>XML documents<indexterm>Author Mode editing<indexterm>Inserting
+              images</indexterm></indexterm></indexterm>
+        <indexterm>Insert images in Author Mode</indexterm>
       </keywords>
     </metadata>
   </prolog>
@@ -13,15 +16,16 @@
     <p>To insert an image in a document while editing in <uicontrol>Author</uicontrol> mode, use one
       of the following methods:<ul>
         <li>Click the <uicontrol><image href="../img/Image16.gif" id="image_gqz_lzy_tr"/>Insert
-            Image</uicontrol> action from the toolbar and choose the image file you want to insert.
-            <ph keyref="product"/> tries to reference the image with a path that is relative to that
-          of the document you are currently editing. For example, if you want to add the
+            Image</uicontrol> action from the toolbar. This opens a dialog box that allows you to
+          choose the image file you want to insert and configure some properties. <ph
+            keyref="product"/> tries to reference the image with a path that is relative to that of
+          the document you are currently editing. For example, if you want to add the
             <codeph>file:/C:/project/xml/dir/img1.jpg</codeph> image into the
             <codeph>file:/C:/project/xml/doc1.xml</codeph> document, <ph keyref="product"/> inserts
           a reference to <codeph>dir/img1.jpg</codeph>. This is useful when multiple users work on a
           common project and they have it stored in multiple locations. <note>The <uicontrol><image
                 href="../img/Image16.gif" id="image_wr2_mzy_tr"/>Insert Image</uicontrol> action is
-            available for the following document types: DocBook 4, DocBook 5, DITA, TEI P4, TEI P5,
+            available for the following document types: DocBook 4, DocBook 5, DITA, TEI,
             XHTML.</note></li>
         <li>Drag an image from other application and drop it in the <uicontrol>Author</uicontrol>
           editing mode. If it is an image file, it is inserted as a reference to the image file. For
@@ -31,15 +35,20 @@
             replace an image, just drag and drop a new image over the existing one. <ph
               keyref="product"/> will automatically update the reference to the new
           image.</note></li>
-        <li>Copy the image from another application (such as an image editor) and paste it into your
-          document. <ph keyref="product"/> prompts you to first save it. After saving the image, a
-          reference to that file path is inserted at the paste position.</li>
+        <li>Copy an image file from another document or another application (such as a system file
+          browser or web browser) and paste it into your document. <ph keyref="product"/> will
+          insert it as a reference to the image file the same as the drag/drop method.</li>
+        <li>Select an image (or part of an image) from another application (such as an image
+          editor), copy it, and paste it into your document. <ph keyref="product"/> will prompt you
+          to save it. After saving the image, a reference to that file path is inserted at the paste
+          position.</li>
       </ul></p>
   </body>
   <related-links>
-    <link href="image-map-editor.dita#image-map-editor"/>
-    <link href="author-image-rendering.dita">
+    <linklist><title>Related Information:</title><link href="image-map-editor.dita#image-map-editor"/><link href="author-image-rendering.dita">
       <linktext>Image Rendering in <uicontrol>Author</uicontrol> Mode</linktext>
-    </link>
+    </link><link href="dita-adding-media.dita#dita-adding-media"/></linklist>
+    
+    
   </related-links>
 </topic>

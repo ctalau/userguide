@@ -6,11 +6,19 @@
   <prolog>
     <metadata>
       <keywords>
-        <indexterm>Editing Ant Build Files</indexterm>
+        <indexterm>Ant build files</indexterm>
       </keywords>
     </metadata>
   </prolog>
   <body>
-    <p>This section explains the features of the Ant build file editor.</p>
+    <p><ph keyref="product"/> includes an Ant editor that provides a variety of specialized features
+      to assist you with creating and editing Ant build files. The editor includes some specialized
+      views, content completion assistance, automatic validation, syntax highlighting, <xref
+        keyref="glossentry_quick-assist"><term>Quick Assist</term></xref> and <xref
+        keyref="glossentry_quick-fix"><term>Quick Fix</term></xref> support, as well as numerous
+      common editing and search features.</p>
   </body>
+  <related-links>
+    <linklist><title>Related Information:</title><link href="xml-editor-specific-actions.dita#xml-editor-specific-actions"/></linklist>
+  </related-links>
 </topic>

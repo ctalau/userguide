@@ -15,27 +15,31 @@
       running the installer interactively. You can use a <filepath>response.varfile</filepath> to
       set the options for an unintended install. Here is an example of a
         <filepath>response.varfile</filepath>:</p>
-    <codeblock outputclass="language-ini">#install4j response file for Oxygen XML Editor 16.0
+    <codeblock outputclass="language-ini">#install4j response file for Oxygen XML Editor 18.0
 #Fri Jul 18 21:52:15 EDT 2014
 sys.adminRights$Boolean=true
 sys.programGroupDisabled$Boolean=false
 createDesktopLinkAction$Boolean=true
 autoVersionChecking=true
-sys.fileAssociation.launchers$StringArray="19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19"
+sys.fileAssociation.launchers$StringArray="19","19","19","19","19","19",
+   "19","19","19","19","19","19","19","19","19","19","19","19","19","19",
+   "19","19","19","19","19","19"
 sys.programGroupAllUsers$Boolean=true
 reportProblem=true
 downloadResources=true
 sys.languageId=en
-sys.installationDir=C\:\\Program Files (x86)\\Oxygen XML Editor 16
+sys.installationDir=C\:\\Program Files (x86)\\Oxygen XML Editor 18
 createQuicklaunchIconAction$Boolean=true
-sys.programGroupName=Oxygen XML Editor 16.0
+sys.programGroupName=Oxygen XML Editor 18.0
 executeLauncherAction$Boolean=true
-sys.fileAssociation.extensions$StringArray="xml","dita","ditamap","ditaval","xsl","xslt","xspec","xsd","rng","rnc","sch","dtd","mod","ent","nvdl","fo","wsdl","xquery","xq","xqy","xqm","xql","xpl","css","json","xpr"</codeblock>
+sys.fileAssociation.extensions$StringArray="xml","dita","ditamap","ditaval",
+   "xsl","xslt","xspec","xsd","rng","rnc","sch","dtd","mod","ent","nvdl","fo",
+   "wsdl","xquery","xq","xqy","xqm","xql","xpl","css","json","xpr"</codeblock>
     <p>The following table describes some of the settings that can be used in the
         <filepath>response.varfile</filepath>:</p>
     <p>
       <table frame="all" id="table_ncm_v3r_x4">
-        <title><filepath>response.varfile</filepath> Options Parameters</title>
+        <title><i>response.varfile</i> Options Parameters</title>
         <tgroup cols="3">
           <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
           <colspec colname="newCol2" colnum="2" colwidth="2.53*" colsep="1" rowsep="1"/>
@@ -49,26 +53,23 @@ sys.fileAssociation.extensions$StringArray="xml","dita","ditamap","ditaval","xsl
           </thead>
           <tbody>
             <row>
-              <entry><codeph>autoVersionChecking</codeph></entry>
+              <entry><parmname>autoVersionChecking</parmname></entry>
               <entry>Automatic version checking.</entry>
-              <entry><codeph>true</codeph> / <codeph>false</codeph>. Default setting is
-                  <codeph>true</codeph>.</entry>
+              <entry><i>true</i> / <i>false</i>. Default setting is <i>true</i>.</entry>
             </row>
             <row>
-              <entry><codeph>reportProblem</codeph></entry>
+              <entry><parmname>reportProblem</parmname></entry>
               <entry>Allows you to report a problem encountered while using <ph keyref="product"
                 />.</entry>
-              <entry><codeph>true</codeph> / <codeph>false</codeph>. Default setting is
-                  <codeph>true</codeph>.</entry>
+              <entry><i>true</i> / <i>false</i>. Default setting is <i>true</i>.</entry>
             </row>
             <row>
-              <entry><codeph>downloadResources</codeph></entry>
+              <entry><parmname>downloadResources</parmname></entry>
               <entry>Allows <ph keyref="product"/> to download resources (links to video
                 demonstrations, webinars and upcoming events) from <ph
                   conkeyref="reusable_links/home"/> to populate the application welcome
                 screen.</entry>
-              <entry><codeph>true</codeph> / <codeph>false</codeph>. Default setting is
-                  <codeph>true</codeph>.</entry>
+              <entry><i>true</i> / <i>false</i>. Default setting is <i>true</i>.</entry>
             </row>
           </tbody>
         </tgroup>
@@ -87,11 +88,11 @@ sys.fileAssociation.extensions$StringArray="xml","dita","ditamap","ditaval","xsl
           <stentry>Meaning</stentry>
         </sthead>
         <strow>
-          <stentry><codeph>-q</codeph></stentry>
+          <stentry><parmname>-q</parmname></stentry>
           <stentry>Run the installer in unattended mode. The installer will not prompt the user for
             input during the install. Default settings will be used for all options unless a
-              <filepath>response.varfile</filepath> is specified using the <codeph>-varfile</codeph>
-            option or individual settings are specified using <p>
+              <filepath>response.varfile</filepath> is specified using the <i>-varfile</i> option or
+            individual settings are specified using <p>
               <dl>
                 <dlentry>
                   <dt>- on Windows: </dt>
@@ -113,7 +114,7 @@ sys.fileAssociation.extensions$StringArray="xml","dita","ditamap","ditaval","xsl
             </p></stentry>
         </strow>
         <strow>
-          <stentry><codeph>-overwrite</codeph></stentry>
+          <stentry><parmname>-overwrite</parmname></stentry>
           <stentry>In unattended mode, the installer does not overwrite files with the same name if
             a previous version of the <ph keyref="product"/> is installed in the same folder. The
               <parmname>-overwrite</parmname> parameter added after the <parmname>-q</parmname>
@@ -139,7 +140,7 @@ sys.fileAssociation.extensions$StringArray="xml","dita","ditamap","ditaval","xsl
             </p></stentry>
         </strow>
         <strow>
-          <stentry><codeph>-console</codeph></stentry>
+          <stentry><parmname>-console</parmname></stentry>
           <stentry>
             <p>To display a console for the unattended installation, add a
                 <parmname>-console</parmname> parameter to the command line. <dl>
@@ -149,9 +150,9 @@ sys.fileAssociation.extensions$StringArray="xml","dita","ditamap","ditaval","xsl
                     <p>
                       <codeblock>start /wait <ph keyref="executableInstallWindows"/> -q -console</codeblock>
                     </p>
-                    <note>The use of <codeph>start /wait</codeph> on Windows is required to make the
-                      installer run in the foreground. It you run it without <codeph>start
-                        /wait</codeph>, it will run in the background.</note>
+                    <note>The use of <i>start /wait</i> on Windows is required to make the installer
+                      run in the foreground. It you run it without <i>start /wait</i>, it will run
+                      in the background.</note>
                   </dd>
                 </dlentry>
                 <dlentry>
@@ -166,7 +167,7 @@ sys.fileAssociation.extensions$StringArray="xml","dita","ditamap","ditaval","xsl
           </stentry>
         </strow>
         <strow>
-          <stentry><codeph>-varfile</codeph></stentry>
+          <stentry><parmname>-varfile</parmname></stentry>
           <stentry>Points to the location of a <filepath>response.varfile</filepath> to be used
             during an unattended installation. For example:<p>
               <dl>
@@ -190,7 +191,7 @@ sys.fileAssociation.extensions$StringArray="xml","dita","ditamap","ditaval","xsl
             </p></stentry>
         </strow>
         <strow>
-          <stentry><codeph>-V</codeph></stentry>
+          <stentry><parmname>-V</parmname></stentry>
           <stentry>Is used to define a variable to be used by an unattended installation. For example:<p>
               <dl>
                 <dlentry>

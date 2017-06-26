@@ -3,8 +3,6 @@
   PUBLIC "-//OASIS//DTD DITA Topic//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/topic.dtd">
 <topic id="cms-integration">
   <title>Content Management System (CMS) Integration</title>
-  <shortdesc>Describes how you can integrate <ph keyref="product"/> with content management
-    systems.</shortdesc>
   <prolog>
     <metadata>
       <keywords><indexterm>Content Management System integration</indexterm></keywords>
@@ -13,16 +11,19 @@
   <body>
     <p>This chapter explains how you can use <ph keyref="product"/> with Documentum CMS and
       Microsoft SharePoint. <ph product="editor author developer">You can use the <xref
-          href="../tasks/howto-custom-protocol-plugin.dita#howto-custom-protocol-plugin"
+          href="howto-custom-protocol-plugin.dita#howto-custom-protocol-plugin"
           format="dita">plugin support</xref> to develop your own integration with other content
         management systems.</ph>.</p>
     <p>All the major CMS vendors that are listed in the <xref
-        href="http://www.oxygenxml.com/partners.html#solutionpartners%28cms%29" format="html"
+        href="https://www.oxygenxml.com/partners.html#solutionpartners%28cms%29" format="html"
         scope="external">CMS Solution Partners section of our website</xref> also provide CMS
       integration with <ph keyref="product"/>.</p>
   </body>
   <related-links>
-    <link href="../concepts/oxygen-plugin.dita#oxygen-plugin" product="editor author developer"/>
+    <linklist>
+      <title>Related Information:</title>
+    <link href="oxygen-plugin.dita#oxygen-plugin" product="editor author developer"/>
     <link href="working-with-databases.dita#working-with-databases"/>
+    </linklist> 
   </related-links>
 </topic>

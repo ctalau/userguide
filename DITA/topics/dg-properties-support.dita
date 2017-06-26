@@ -14,9 +14,9 @@
         <i>paged</i> categories properties in <uicontrol>Author</uicontrol> mode, as well as some of
       the values of the <i>visual</i> category that are listed below under the <b>Ignored Values</b>
       column. For the <ph keyref="product"/>-specific (extension) CSS properties, see <xref
-        href="../concepts/dg-oXygen-css-extensions.dita"/>.</p>
+        href="dg-oXygen-css-extensions.dita"/>.</p>
     <p>
-      <simpletable relcolwidth="1.12* 1.06* 1.0*">
+      <simpletable relcolwidth="1.16* 1.14* 1.0*">
         <sthead>
           <stentry>Name</stentry>
           <stentry>Rendered Values</stentry>
@@ -71,7 +71,8 @@
           <stentry>
             <codeph>'background'</codeph>
           </stentry>
-          <stentry>NONE</stentry>
+          <stentry><codeph>background-color | background-image | background-position |
+              background-repeat</codeph></stentry>
           <stentry/>
         </strow>
         <strow>
@@ -424,8 +425,9 @@
           </stentry>
           <stentry>
             <codeph><xref href="#dg-properties-support/length" format="dita">&lt;length&gt;</xref> |
-              &lt;percentage&gt; | none | inherit</codeph> - supported for inline, block-level, and
-            replaced elements (such as images, tables, table cells)</stentry>
+              &lt;percentage&gt; | none | inherit</codeph> - supported for <term>inline</term>,
+              <term>block-level</term>, and replaced elements (such as images, tables, table
+            cells)</stentry>
           <stentry/>
         </strow>
         <strow>
@@ -443,8 +445,9 @@
           </stentry>
           <stentry>
             <codeph><xref href="#dg-properties-support/length" format="dita">&lt;length&gt;</xref> |
-              &lt;percentage&gt; | inherit</codeph> - supported for inline, block-level, and
-            replaced elements (such as images, tables, table cells)</stentry>
+              &lt;percentage&gt; | inherit</codeph> - supported for <term>inline</term>,
+              <term>block-level</term>, and replaced elements (such as images, tables, table
+            cells)</stentry>
           <stentry/>
         </strow>
         <strow>
@@ -507,8 +510,9 @@
             <codeph>'position'</codeph>
           </stentry>
           <stentry><codeph>absolute | fixed</codeph> - supported for block display elements,
-              <codeph>relative</codeph> - supported for block and inline display elements </stentry>
-          <stentry><codeph>absolute | fixed</codeph> not supported for inline display
+              <codeph>relative</codeph> - supported for <term>block</term> and <term>inline</term>
+            display elements </stentry>
+          <stentry><codeph>absolute | fixed</codeph> not supported for <term>inline</term> display
             elements</stentry>
         </strow>
         <strow>
@@ -619,8 +623,9 @@
           </stentry>
           <stentry>
             <codeph><xref href="#dg-properties-support/length" format="dita">&lt;length&gt;</xref> |
-              &lt;percentage&gt; | auto | inherit</codeph> - supported for inline, block-level, and
-            replaced elements (such as images, tables, table cells)</stentry>
+              &lt;percentage&gt; | auto | inherit</codeph> - supported for <term>inline</term>,
+              <term>block-level</term>, and replaced elements (such as images, tables, table
+            cells)</stentry>
           <stentry/>
         </strow>
         <strow>
@@ -646,6 +651,9 @@
         Level 3 length type specifications</xref>.</p>
   </body>
   <related-links>
-    <link href="../concepts/dg-oXygen-css-extensions.dita"/>
+    <linklist>
+      <title>Related Information:</title>
+      <link href="dg-oXygen-css-extensions.dita"/>
+    </linklist>
   </related-links>
 </topic>

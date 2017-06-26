@@ -5,14 +5,18 @@
   <prolog>
     <metadata>
       <keywords>
-        <indexterm>Sort table with merged cells</indexterm>
+        <indexterm>Author editing mode<indexterm>Tables<indexterm>Sorting tables with merged
+              cells</indexterm></indexterm></indexterm>
+        <indexterm>XML documents<indexterm>Author Mode editing<indexterm>Tables<indexterm>Sorting
+                tables with merged cells</indexterm></indexterm></indexterm></indexterm>
+        <indexterm>Sorting tables with merged cells in Author Mode</indexterm>
       </keywords>
     </metadata>
   </prolog>
   <body>
     <p>If a table contains cells that span over multiple rows, you can not perform the sorting
       operation over the entire table. Still, the sorting mechanism works over a selection of rows
-      that do not contain <term>rowspans</term>.<note>For this type of table, the
+      that do not contain <i>rowspans</i>.<note>For this type of table, the
           <uicontrol>Sort</uicontrol> dialog box keeps the <uicontrol>All rows</uicontrol> option
         disabled even if you perform the sorting operation over a selection of rows.</note></p>
   </body>

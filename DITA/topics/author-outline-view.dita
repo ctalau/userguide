@@ -5,7 +5,12 @@
   <title>Outline View in Author Mode</title>
   <prolog>
     <metadata>
-      <keywords><indexterm>Outline view in Author mode</indexterm></keywords>
+      <keywords>
+        <indexterm>Author editing mode<indexterm>Outline view</indexterm></indexterm>
+        <indexterm>XML documents<indexterm>Author Mode editing<indexterm>Outline
+            view</indexterm></indexterm></indexterm>
+        <indexterm>Outline view in Author Mode</indexterm>
+      </keywords>
     </metadata>
   </prolog>
   <body>
@@ -60,8 +65,6 @@
             X))</shortcut></uicontrol> key after dragging, a copy operation will be performed
           instead of a move.</li>
       </ul>
-      <p>The drag and drop actions in the <uicontrol>Outline</uicontrol> view can be <xref
-          href="preferences-view.dita">disabled and enabled from a Preferences page.</xref></p>
       <note type="tip" product="author authorEclipse editor editorEclipse">You can select and drag
         multiple nodes in the <uicontrol>Outline</uicontrol> view when editing in
           <uicontrol>Author</uicontrol> mode.</note>

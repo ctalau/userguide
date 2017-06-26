@@ -5,6 +5,7 @@ Analytics
 AntennaHouse
 Arial
 AutoCorrect
+Autocomplete
 Autoconnect
 Backmapping
 BaseX
@@ -34,6 +35,7 @@ Foldable
 GitHub
 Glossentry
 Glossgroup
+HiDPI
 HyperText
 InDesign
 JARs
@@ -164,6 +166,7 @@ keyref
 keyrefs
 keystore
 keystores
+keytool
 libxml
 libxslt
 localhost
@@ -205,6 +208,7 @@ screenshot
 screenshots
 serializer
 servlet
+splitscreen
 startup
 stemmer
 strikethrough

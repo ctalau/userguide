@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="epub-document-type">
-  <title>EPUB Document Type</title>
+  <title>EPUB Document Type (Framework)</title>
   <prolog>
     <metadata>
       <keywords>
-        <indexterm>Predefined Document Types<indexterm>EPUB</indexterm></indexterm>
+        <indexterm>Predefined frameworks<indexterm>EPUB</indexterm></indexterm>
         <indexterm>EPUB document type</indexterm>
       </keywords>
     </metadata>
   </prolog>
   <body>
-    <p>Three distinct frameworks are supported for the EPUB document type:<ul>
+    <p><b>EPUB</b> is an e-book file format that is a ZIP archive and can be downloaded and read on
+      devices such as phones, tablets, computers, or e-readers.<ph product="author developer editor">
+        <ph keyref="product"/> includes an <xref
+          href="archive-browser-view.dita#archive-browser-view"><uicontrol>Archive
+            Browser</uicontrol> view</xref> that allows you to view the contents and structure of
+        this type of file.</ph><ph product="authorEclipse developerEclipse editorEclipse"> You can
+          <xref href="archive-browser-view.dita#archive-browser-view">view the contents and
+          structure of this type of file</xref> in the <uicontrol>Navigator</uicontrol> view or main
+        editing pane.</ph></p>
+    <p>Three distinct <xref keyref="glossentry_framework"><term>frameworks</term></xref> are
+      supported for the EPUB document type:<ul>
         <li><uicontrol>NCX</uicontrol> - A declarative global navigation definition. </li>
         <li><uicontrol>OCF</uicontrol> - The Open Container Format (OCF) defines a mechanism by
           which all components of an Open Publication Structure (OPS) can be combined into a single
@@ -19,11 +29,23 @@
         <li><uicontrol>OPF</uicontrol> - The Open Packaging Format (OPF) defines the mechanism by
           which all components of a published work that conforms to the Open Publication Structure
           (OPS) standard (including metadata, reading order, and navigational information) are
-          packaged in an OPS Publication. <note><ph keyref="product"/> supports both OPF 2.0
-            and OPF 3.0.</note></li>
+          packaged in an OPS Publication. <note><ph keyref="product"/> supports both OPF 2.0 and OPF
+            3.0.</note></li>
       </ul></p>
+    <section id="file_definition">
+      <title>File Definition</title>
+      <p>A file is considered to be an <i>EPUB</i> document if it has a file extension of
+          <filepath>.epub</filepath>. </p>
+    </section>
     <section id="document_templates">
-      <title>Document Templates</title>
+      <title>Default Document Templates</title>
+      <p>There are a variety of default <i>EPUB</i> templates available when creating <xref
+          href="new-dialog-sa.dita#new-dialog-sa" product="author developer editor">new documents
+          from templates</xref><xref href="creating-from-templates.dita#creating-from-templates"
+          product="authorEclipse developerEclipse editorEclipse">new documents from templates</xref>
+        and they can be found the following folders in <uicontrol>Framework Templates</uicontrol>:
+          <uicontrol>NCX</uicontrol>, <uicontrol>OCF</uicontrol>, <uicontrol>OPF 2.0</uicontrol>,
+        and <uicontrol>OPF 3.0</uicontrol>.</p>
       <p>The default templates for the <i>NCX</i> document types are located in the <filepath><term
             conkeyref="reusables-user-guide/oxy-install-dir"/>/frameworks/ncx/templates</filepath>
         folder.</p>
@@ -36,19 +58,9 @@
       <p>The default template for the <i>OPF 3.0</i> document type is located in the <filepath><term
             conkeyref="reusables-user-guide/oxy-install-dir"
           />/frameworks/opf/templates/3.0</filepath> folder. </p>
-      <p>The following EPUB templates are available when creating <xref
-          href="new-dialog-sa.dita#new-dialog-sa" product="author developer editor">new documents
-          from templates</xref><xref href="creating-from-templates.dita#creating-from-templates"
-          product="authorEclipse developerEclipse editorEclipse">new documents from
-        templates</xref>:</p>
-      <ul id="ul_p3m_jx3_cr">
-        <li><uicontrol>NCX - Toc</uicontrol> - New table of contents.</li>
-        <li><uicontrol>OCF - Container</uicontrol> - New container based OCF.</li>
-        <li><uicontrol>OCF - Encryption</uicontrol> - New encryption based OCF.</li>
-        <li><uicontrol>OCF - Signatures</uicontrol> - New signature based OCF.</li>
-        <li><uicontrol>OPF 2.0 - Content (2.0)</uicontrol> - New OPF 2.0 content.</li>
-        <li><uicontrol>OPF 3.0 - Content (3.0)</uicontrol> - New OPF 3.0 content.</li>
-      </ul>
     </section>
   </body>
+  <related-links>
+    <linklist><title>Related Information:</title><link href="working-with-epub.dita#working-with-epub"/></linklist>
+  </related-links>
 </topic>

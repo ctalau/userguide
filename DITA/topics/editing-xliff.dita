@@ -5,8 +5,7 @@
   <prolog>
     <metadata>
       <keywords>
-        <indexterm>Editing XLIFF document
-          <indexterm>1.2</indexterm><indexterm>2.0</indexterm></indexterm>
+        <indexterm>XLIFF documents<indexterm>Editing features</indexterm></indexterm>
       </keywords>
     </metadata>
   </prolog>
@@ -33,6 +32,5 @@
           in <filepath><term conkeyref="reusables-user-guide/oxy-install-dir"
             />/frameworks/xliff/xsd/2.0/modules</filepath>.</li>
       </ul></p>
-    <p> </p>
   </body>
 </topic>

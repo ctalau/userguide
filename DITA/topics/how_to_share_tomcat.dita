@@ -2,8 +2,6 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="how_to_share_tomcat">
   <title>Sharing a Tomcat Instance</title>
-  <shortdesc>Describes how to share a Tomcat instance between <ph keyref="webappProduct"/> and other
-    applications.</shortdesc>
   <prolog>
     <metadata>
       <keywords>
@@ -21,7 +19,7 @@
           that there will not be any clashes with those set by other applications.</li>
         <li>You have to adapt the JVM's memory configuration to the scenario where there will be
           more applications competing for the same pool of memory.</li>
-        <li>The <ph keyref="webappProduct"/> currently does not restart (or <term>reload</term> in
+        <li>The <ph keyref="webappProduct"/> currently does not restart (or <i>reload</i> in
           Apache Tomcat terminology) correctly unless the Servlet Container is also restarted.</li>
       </ul></p>
   </body>

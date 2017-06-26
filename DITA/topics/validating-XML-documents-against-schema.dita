@@ -6,7 +6,9 @@
   <prolog>
     <metadata>
       <keywords>
-        <indexterm>Editing XML Documents<indexterm>against a schema</indexterm></indexterm>
+        <indexterm>XML documents<indexterm>Validation<indexterm>Against a
+            schema</indexterm></indexterm></indexterm>
+        <indexterm>Validating XML Documents<indexterm>Against a schema</indexterm></indexterm>
       </keywords>
     </metadata>
   </prolog>
@@ -21,9 +23,14 @@
         />Validate</uicontrol> function ensures that your document is compliant with the rules
       defined by an associated DTD, XML Schema, Relax NG, or Schematron schema. XML Schema or Relax
       NG schema also allows you to embed Schematron rules. For Schematron validations you can also
-      select the <term>validation phase</term>.</p>
+      select the <b>validation phase</b>.</p>
   </body>
   <related-links>
-    <link href="validate-xml-with-sch.dita#validate-xml-with-sch"/>
+    <linklist>
+      <title>Related Information:</title>
+      <link href="validate-xml-with-sch.dita#validate-xml-with-sch"
+        product="developer editor developerEclipse editorEclipse"/>
+      <link href="associate-schema-to-document.dita#associate-schema-to-document"/>
+    </linklist>
   </related-links>
 </topic>

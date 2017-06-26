@@ -5,7 +5,10 @@
   <prolog>
     <metadata>
       <keywords>
-        <indexterm>Format and Indent <indexterm>set Indent Size to zero</indexterm></indexterm>
+        <indexterm>Text editing mode<indexterm>Set indent to zero</indexterm></indexterm>
+        <indexterm>XML documents<indexterm>Text Mode editing<indexterm>Set indent to
+              zero</indexterm></indexterm></indexterm>
+        <indexterm>Set indent to zero in Text Mode</indexterm>
       </keywords>
     </metadata>
   </prolog>
@@ -29,8 +32,8 @@
               <li>
                 <ph conkeyref="reusables-preferences-pages/Open-the-preferences-page"/> and go to
                   <xref href="preferences-editor-format.dita#preferences-editor-format"><menucascade>
-                    <uicontrol> Editor</uicontrol>
-                    <uicontrol> Format</uicontrol>
+                    <uicontrol>Editor</uicontrol>
+                    <uicontrol>Format</uicontrol>
                   </menucascade></xref>.</li>
               <li>Select <uicontrol>Detect indent on open</uicontrol>.</li>
               <li>Select <uicontrol>Use zero-indent if detected</uicontrol>. </li>
@@ -50,8 +53,8 @@
               <li>
                 <ph conkeyref="reusables-preferences-pages/Open-the-preferences-page"/> and go to
                   <xref href="preferences-editor-format.dita#preferences-editor-format"><menucascade>
-                    <uicontrol> Editor</uicontrol>
-                    <uicontrol> Format</uicontrol>
+                    <uicontrol>Editor</uicontrol>
+                    <uicontrol>Format</uicontrol>
                   </menucascade></xref>.</li>
               <li>Deselect <uicontrol>Detect indent on open</uicontrol>.</li>
               <li>Set <uicontrol>Indent size</uicontrol> to <codeph>0</codeph>. </li>

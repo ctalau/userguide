@@ -2,13 +2,15 @@
 <!DOCTYPE topic
   PUBLIC "-//OASIS//DTD DITA Topic//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/topic.dtd">
 <topic id="rendering-xml-author-mode">
-  <title>Rendering XML Documents in Author Mode</title>
+  <title>Styling XML Documents in Author Mode</title>
   <prolog>
     <metadata>
       <keywords>
-        <indexterm>Author Editor<indexterm>WYSIWYG editing</indexterm></indexterm>
-        <indexterm>Author Editing Mode<indexterm>roles: content author, framework
-            developer</indexterm></indexterm>
+        <indexterm>Author editing mode<indexterm>Rendering documents</indexterm></indexterm>
+        <indexterm>XML documents<indexterm>Author Mode editing<indexterm>Rendering
+              documents</indexterm></indexterm></indexterm>
+        <indexterm>Rendering documents in Author Mode</indexterm>
+        <indexterm>Styles in Author mode</indexterm>
       </keywords>
     </metadata>
   </prolog>
@@ -27,13 +29,17 @@
         menu, see <xref
           href="selecting-combining-multiple-css-styles.dita#selecting-combining-multiple-css-styles"
         />.</note>
-      <p>You can select a <term>main</term> CSS stylesheet that styles the whole document and then
-        apply <term>alternate</term> styles, as layers, to specific parts of the document. In the
-        subsequent figure, a DITA document has the <uicontrol>Century</uicontrol> style selected for
-        the <term>main</term> CSS and the <term>alternate</term> styles <uicontrol>Full
-          width</uicontrol>, <uicontrol>Show table column specification</uicontrol>,
+      <p>You can select a <term>main CSS style</term> that applies to the whole document and then
+          <term>alternate styles</term> that are applied as layers to specific parts of the
+        document. For example, in the subsequent figure, a DITA document has the
+          <uicontrol>Century</uicontrol> style selected for the <term>main CSS</term> and the
+          <term>alternate styles</term>
+        <uicontrol>Full width</uicontrol>, <uicontrol>Show table column specification</uicontrol>,
           <uicontrol>Hints</uicontrol>, and <uicontrol>Inline actions</uicontrol> are combined for
         additive styling to specific parts of the document.</p>
+      <p>The selections from the <uicontrol>Styles</uicontrol> drop-down menu are persistent,
+        meaning that <ph keyref="product"/> will remember the selections when subsequent documents
+        are opened.</p>
       <p>
         <fig id="css.styles.image">
           <title>Styles Drop-down Menu in a DITA Document</title>
@@ -43,8 +49,12 @@
     </section>
   </body>
   <related-links>
-    <link href="associate-schema-to-document.dita#associate-schema-to-document"/>
-    <link
-      href="selecting-combining-multiple-css-styles.dita#selecting-combining-multiple-css-styles"/>
+    <linklist>
+      <title>Related Information:</title>
+      <link href="associate-schema-to-document.dita#associate-schema-to-document"/>
+      <link
+        href="selecting-combining-multiple-css-styles.dita#selecting-combining-multiple-css-styles"
+      />
+    </linklist>
   </related-links>
 </topic>

@@ -37,8 +37,9 @@
                 <dlentry>
                   <dt><uicontrol>Preserve line breaks in attributes</uicontrol></dt>
                   <dd>Line breaks found in attribute values are preserved.<note>When this option is
-                      enabled, the <xref href="#preferences-editor-format-xml/break-long-attributes"
-                        format="dita"><uicontrol>Break long attributes</uicontrol> option</xref> is
+                      selected, the <xref
+                        href="#preferences-editor-format-xml/break-long-attributes" format="dita"
+                          ><uicontrol>Break long attributes</uicontrol> option</xref> is
                       automatically disabled.</note></dd>
                 </dlentry>
                 <dlentry id="break-long-attributes">
@@ -55,18 +56,18 @@
   text &lt;parent&gt; &lt;child&gt;&lt;/child&gt; &lt;/parent&gt;
 &lt;/root&gt;</codeblock></p><p><uicontrol>Indent
                         inline elements</uicontrol>
-                      enabled:<codeblock outputclass="language-xml" xml:space="preserve">&lt;root&gt; text &lt;parent&gt;
+                      selected:<codeblock outputclass="language-xml" xml:space="preserve">&lt;root&gt; text &lt;parent&gt;
     &lt;child/&gt;
   &lt;/parent&gt;
 &lt;/root&gt;</codeblock></p><p><uicontrol>Indent
-                        inline elements</uicontrol>
-                      disabled:<codeblock outputclass="language-xml" xml:space="preserve">&lt;root&gt; text &lt;parent&gt; &lt;child/&gt; &lt;/parent&gt; &lt;/root&gt;</codeblock></p></dd>
+                        inline elements</uicontrol> not
+                      selected:<codeblock outputclass="language-xml" xml:space="preserve">&lt;root&gt; text &lt;parent&gt; &lt;child/&gt; &lt;/parent&gt; &lt;/root&gt;</codeblock></p></dd>
                 </dlentry>
                 <dlentry>
                   <dt><uicontrol>Expand empty elements</uicontrol></dt>
                   <dd>The <uicontrol>Format and Indent</uicontrol> operation outputs empty elements
                     with a separate closing tag (for example, <codeph>&lt;a
-                      atr1="v1"&gt;&lt;/a&gt;</codeph>). When not enabled, the same operation
+                      atr1="v1"&gt;&lt;/a&gt;</codeph>). When not selected, the same operation
                     represents an empty element in a more compact form (<codeph>&lt;a
                       atr1="v1"/&gt;</codeph>).</dd>
                 </dlentry>
@@ -92,8 +93,11 @@
           <dt><uicontrol>Element Spacing</uicontrol> Section</dt>
           <dd>This section controls how the application handles whitespaces found in XML content.
             You can <uicontrol>Add</uicontrol> or <uicontrol>Remove</uicontrol> element names or
-            simplified XPath expressions in the various tabs.<note>The XPath expressions can accept
-              one of the following attribute conditions (default attribute values are not taken into account):<ul>
+            simplified XPath expressions in the various tabs.<p id="simplified-XPath">The XPath
+              expressions can accept multiple attribute conditions and inside each condition you can
+              use <i>AND/OR</i> boolean operators and parentheses to override the
+              priority.</p><p>You can use one or more of the following attribute conditions (default
+              attribute values are not taken into account):<ul>
                 <li><i>element[@attr]</i> - Matches all instances of the specified element that
                   include the specified attribute.</li>
                 <li><i>element[not(@attr)]</i> - Matches all instances of the specified element that
@@ -103,17 +107,19 @@
                 <li><i>element[@attr != "value"]</i> - Matches all instances of the specified
                   element that include the specified attribute and its value is different than the
                   one given.</li>
-              </ul><p>The following are just examples of how simplified XPath expressions might look like:<ul>
-                  <li><codeph>elementName</codeph></li>
-                  <li><codeph>//elementName</codeph></li>
-                  <li><codeph>/elementName1/elementName2/elementName3</codeph></li>
-                  <li><codeph>//xs:localName</codeph><note>The namespace prefixes (such as
-                        <codeph>xs</codeph>) are treated as part of the element name without taking
-                      its binding to a namespace into account.</note></li>
-                  <li><codeph>//xs:documentation[@lang="en"]</codeph></li>
-                </ul></p></note></dd>
-          <dd>The tabs are as follows:<p>
-              <dl>
+              </ul></p><p><b>Example:</b> The following is an example of how you could use multiple
+              boolean operators and parentheses inside an attribute
+              condition:</p><codeblock>*[@a and @b or @c and @d]
+*[@a and (@b or @c) and @d]</codeblock><p>The
+              following are just examples of how simplified XPath expressions might look like:<ul>
+                <li><codeph>elementName</codeph></li>
+                <li><codeph>//elementName</codeph></li>
+                <li><codeph>/elementName1/elementName2/elementName3</codeph></li>
+                <li><codeph>//xs:localName</codeph> Note: The namespace prefixes (such as
+                    <codeph>xs</codeph>) are treated as part of the element name without taking its
+                  binding to a namespace into account.</li>
+                <li><codeph>//xs:documentation[@lang="en"]</codeph></li>
+              </ul></p><p>The tabs are as follows:<dl>
                 <dlentry>
                   <dt><uicontrol>Preserve space</uicontrol></dt>
                   <dd>List of elements for which the <uicontrol>Format and Indent</uicontrol>
@@ -137,8 +143,7 @@
                     content. You can choose to break the line <i>before</i> the element,
                       <i>after</i>, or both.</dd>
                 </dlentry>
-              </dl>
-            </p></dd>
+              </dl></p></dd>
         </dlentry>
         <dlentry id="schema-aware-format-indent">
           <dt><uicontrol id="pref_sa_format">Schema aware format and indent</uicontrol></dt>
@@ -158,7 +163,7 @@
                       href="#preferences-editor-format-xml/element-spacing-section" format="dita"
                         ><uicontrol>Preserve space</uicontrol> tab of the <uicontrol>Element
                         Spacing</uicontrol> list</xref>) are ignored by the <uicontrol>Format and
-                      Indent</uicontrol> operation. When this option is enabled and you edit one of
+                      Indent</uicontrol> operation. When this option is selected and you edit one of
                     these elements, its content is formatted.</dd>
                 </dlentry>
                 <dlentry>
@@ -166,7 +171,7 @@
                       300</uicontrol></dt>
                   <dd>When you paste a chunk of text that has fewer than 300 lines, the inserted
                     content is indented. To keep the original indent style of the document you copy
-                    content from, disable this option.</dd>
+                    content from, deselect this option.</dd>
                 </dlentry>
               </dl>
             </p></dd>

@@ -4,7 +4,7 @@
   <title>Checkbox Form Control</title>
   <shortdesc>The <codeph>oxy_checkbox</codeph> built-in form control is used for a graphical user
     interface box that you can click to enable or disable an option. A single checkbox or multiple
-    check-boxes can be used to present and edit the value on an attribute or element.</shortdesc>
+    checkboxes can be used to present and edit the value on an attribute or element.</shortdesc>
   <prolog>
     <metadata>
       <keywords>
@@ -28,7 +28,8 @@
         <li><ph conkeyref="reusables-author-mode-customization/uncheckedValues-property"/></li>
       <li><ph conkeyref="reusables-author-mode-customization/labels-property"/>. If this property is
           not specified, the <codeph>values</codeph> property is used as the label.</li>
-      <li><ph conkeyref="reusables-author-mode-customization/columns-property"/></li>
+      <li><ph conkeyref="reusables-author-mode-customization/columns-property"
+            ><?oxy_comment_start author="Alex Jitianu" timestamp="20170530T081840+0000" comment="For the check box form control, the &quot;columns&quot; property actually controls the layout. The check boxes will be grouped in a number of columns equal with the given value."?></ph><?oxy_comment_end?></li>
       <li product="author editor"><ph conkeyref="reusables-author-mode-customization/color-property"
           /></li>
         <li><ph conkeyref="reusables-author-mode-customization/hover-property-li"
@@ -39,36 +40,35 @@ p:showBorder {
   border: 1px solid red;
 }</codeblock></li>
       </ul></p>
-    <example>
-      <title>Single Checkbox Form Control </title>
-      <codeblock outputclass="language-css">checkBox[attribute]:before {
-    content: "A check box editor that edits a two valued attribute (On/Off).
+    <p><b><u>Example: Single <i>oxy_checkbox</i> Form
+      Control</u></b><codeblock outputclass="language-css">checkBox[attribute]:before {
+    content: "A check box editor that edits a two valued attribute (On/Off)
               The values are specified in the CSS:"
         oxy_checkbox(
         edit, "@attribute",
         values, "On",
         uncheckedValues, "Off",
         labels, "On/Off"); 
-}</codeblock>
-    </example>
-    <example>
-      <title>Multiple Check-boxes Form Control </title>
-      <codeblock outputclass="language-css">multipleCheckBox[attribute]:before {
+}</codeblock></p>
+    <p><b><u>Example: Multiple <i>oxy_checkbox</i> Form
+      Controls</u></b><codeblock outputclass="language-css">multipleCheckBox[attribute]:before {
     content: "Multiple checkboxes editor that edits an attribute value. 
-              Depending whether the check-box is selected a different value is committed:"
+              Depending whether the check-box is selected,
+              a different value is committed:"
         oxy_checkbox(        
         edit, "@attribute",
         values, "true, yes, on",
         uncheckedValues, "false, no, off",
         resultSeparator, ","
         labels, "Present, Working, Started");
-}</codeblock>
-    </example>
-    <note conkeyref="reusables-author-mode-customization/note-form-control-code-templates"/>
-    <note type="tip">To insert a sample of the <codeph>oxy_checkbox</codeph> form control, invoke
-      the <wintitle>Content Completion Assistant</wintitle> by pressing <uicontrol
-        conkeyref="reusable_oxygen_shortcuts_list/ctrl_space"/> and select the <image
+}</codeblock></p>
+    <note type="tip">To insert a sample of the <codeph>oxy_checkbox</codeph> form control in a CSS
+      file <ph product="author developer editor">(or LESS file)</ph>, invoke the <xref
+        keyref="glossentry_content-completion-assistant"><term>Content Completion
+        Assistant</term></xref> by pressing <uicontrol
+        conkeyref="reusable-oxygen-shortcuts-list/ctrl_space"/> and select the <image
         href="../img/CodeTemplates12.gif" id="image_p1r_fhh_5r"/>
-      <codeph>oxy_checkbox</codeph> code template.</note>
+      <codeph>oxy_checkbox</codeph> code template.<p><ph
+          conkeyref="reusables-author-mode-customization/samples-ph"/></p></note>
   </body>
 </topic>

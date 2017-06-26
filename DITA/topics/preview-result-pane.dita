@@ -2,23 +2,29 @@
 <!DOCTYPE topic
   PUBLIC "-//OASIS//DTD DITA Topic//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/topic.dtd">
 <topic id="preview-result-pane">
-  <title>Integrated SVG Viewer in the Results Panel</title><prolog>
+  <title>Integrated SVG Viewer in the Results Panel</title>
+  <prolog>
     <metadata>
-      <keywords><indexterm>Editing SVG Documents<indexterm>preview result pane</indexterm></indexterm></keywords>
+      <keywords>
+        <indexterm>SVG files<indexterm>SVG viewer in Results panel</indexterm></indexterm>
+        <indexterm>SVG Viewer in Results panel</indexterm>
+      </keywords>
     </metadata>
   </prolog>
   <body>
-    <p><ph keyref="product"/> includes an integrated <term>SVG Viewer</term> that can render the
-      results of an XSLT transformation scenario that generates SVG images in the results panel at
-      the bottom of the editor. This is useful for developing XSL stylesheets with the capability of
+    <p><ph keyref="product"/> includes an integrated <b>SVG Viewer</b> that can render the
+      results of an XSLT transformation scenario that generates SVG images in the <xref
+        href="results-view.dita#results-view"><uicontrol>Results</uicontrol> panel</xref> at the
+      bottom of the editor. This is useful for developing XSL stylesheets with the capability of
       producing SVG graphics.</p>
     <p>To enable this feature, select <menucascade>
         <uicontrol>Show in results view as</uicontrol>
         <uicontrol>SVG</uicontrol>
-      </menucascade> in the <xref href="the-output-tab.dita#the-output-tab/show-as-li"
+      </menucascade> in the <xref href="the-output-tab.dita#the-output-tab"
           ><uicontrol>Output</uicontrol> tab of the XSLT transformation scenario configuration
         dialog box</xref>. When you run the transformation, the SVG result is then rendered in an
-      integrated SVG viewer in the results panel.</p>
+      integrated SVG viewer in the <xref href="results-view.dita#results-view"
+          ><uicontrol>Results</uicontrol> panel</xref>.</p>
     <section id="example_of_a_usecase">
       <title>Example of a Use-Case</title>
       <p>Suppose you have an XML document that describes the evolution of your sales over a time
@@ -31,18 +37,22 @@
           <li>Create an <xref href="xml-transformation-with-xslt.dita#xml-transformation-with-xslt"
                 ><uicontrol>XML transformation with XSLT</uicontrol> scenario</xref>.</li>
           <li>While configuring the transformation scenario, select <xref
-              href="the-output-tab.dita#the-output-tab/show-as-li"><menucascade>
+              href="the-output-tab.dita#the-output-tab"><menucascade>
                 <uicontrol>Show in results view as</uicontrol>
                 <uicontrol>SVG</uicontrol>
               </menucascade> in the <uicontrol>Output</uicontrol> tab</xref> of the configuration
             dialog box.</li>
           <li>Run the transformation.</li>
         </ol></p>
-      <p>The SVG image is rendered in an integrated SVG viewer in the results panel at the bottom of
-        the editor.<fig>
+      <p>The SVG image is rendered in an integrated SVG viewer in the <xref
+          href="results-view.dita#results-view"><uicontrol>Results</uicontrol> panel</xref> at the
+        bottom of the editor.</p>
+      <p>
+        <fig>
           <title>Integrated SVG Viewer</title>
-          <image href="../img/sa_integrated_svg_viewer.png"/>
-        </fig></p>
+          <image href="../img/sa_integrated_svg_viewer.png" placement="inline"/>
+        </fig>
+      </p>
     </section>
   </body>
 </topic>

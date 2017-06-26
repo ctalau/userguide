@@ -2,9 +2,15 @@
 <!DOCTYPE topic
   PUBLIC "-//OASIS//DTD DITA Topic//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/topic.dtd">
 <topic id="grid-sort">
-  <title>Sorting a Table Column</title><prolog>
+  <title>Sorting a Table Column</title>
+  <prolog>
     <metadata>
-      <keywords><indexterm>Grid Editor<indexterm>sort table column</indexterm></indexterm></keywords>
+      <keywords>
+        <indexterm>Grid editing mode<indexterm>Sort columns</indexterm></indexterm>
+        <indexterm>XML documents<indexterm>Grid Mode editing<indexterm>Sort
+            columns</indexterm></indexterm></indexterm>
+        <indexterm>Sort table columns in Grid Mode</indexterm>
+      </keywords>
     </metadata>
   </prolog>
   <body>
@@ -16,6 +22,6 @@
       sorting for numbers or an alphabetical sorting for text information. The editor automatically
       analyzes the content and decides what type of sorting to apply. When a mixed set of values is
       present in the sorted column, a dialog box is displayed that allows you to choose the desired
-      type of sorting between <term>numerical</term> and <term>alphabetical</term>.</p>
+      type of sorting between <i>numerical</i> and <i>alphabetical</i>.</p>
   </body>
 </topic>

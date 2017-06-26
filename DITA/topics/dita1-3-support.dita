@@ -12,13 +12,14 @@
   <body>
     <p>Starting with version 17.1, <ph keyref="product"/> includes support for some DITA 1.3
       features.</p>
-    <p>To enable DITA 1.3 support in <ph keyref="product"/> and use the DITA Open Toolkit 2.x for
-      publishing, <ph conkeyref="reusables-preferences-pages/open-the-preferences-page"/>, go to
+    <p>To enable DITA 1.3 support in <ph keyref="product"/> and use the DITA Open Toolkit <ph
+        keyref="webhelpPluginDITAOT2xVer"/> for publishing, <ph
+        conkeyref="reusables-preferences-pages/open-the-preferences-page"/>, go to
         <uicontrol>DITA</uicontrol>, and select the <uicontrol>Built-in DITA OT 2.x</uicontrol>
       radio button.</p>
     <p>The <ph keyref="product"/> publication of the full DITA 1.3 specifications can be found at
         <xref
-        href="http://www.oxygenxml.com/dita/1.3/specs/index.html#introduction/dita-release-overview.html"
+        href="https://www.oxygenxml.com/dita/1.3/specs/index.html#introduction/dita-release-overview.html"
         format="html" scope="external"/>.</p>
     <p>The following table is a list of DITA 1.3 features and their implementation status in <ph
         keyref="product"/>:<table frame="all" rowsep="1" colsep="1" id="table_zbc_mv5_ps">
@@ -31,7 +32,8 @@
             <row>
               <entry>Feature</entry>
               <entry>Editing</entry>
-              <entry>Publishing [Latest DITA Open Toolkit 2.x is used.]</entry>
+              <entry>Publishing [DITA Open Toolkit <ph keyref="webhelpPluginDITAOT2xVer"/> is
+                used]</entry>
             </row>
           </thead>
           <tbody>
@@ -78,8 +80,8 @@
               <entry>Special rendering in PDF and XHTML-based outputs</entry>
             </row>
             <row>
-              <entry>Other new DITA 1.3 elements (<codeph>div</codeph>,
-                  <codeph>strike-through</codeph>, <codeph>overline</codeph>, etc)</entry>
+              <entry>Other new DITA 1.3 elements (<i>div</i>, <i>strike-through</i>,
+                <i>overline</i>, etc)</entry>
               <entry>
                 <p>Validation and Content Completion</p>
               </entry>
@@ -91,29 +93,29 @@
               <entry>No specific support implemented</entry>
             </row>
             <row>
-              <entry>Scoped keys</entry>
+              <entry><xref href="dita-keyscopes.dita#dita-keyscopes">Scoped keys</xref></entry>
               <entry>
                 <p>Define key scopes</p>
                 <p>Validate and check for completeness</p>
-                <p>Resolve <term>keyrefs</term> and <term>conkeyrefs</term> taking key scopes into
-                  account</p>
+                <p>Resolve <i>keyrefs</i> and <i>conkeyrefs</i> taking key scopes into account</p>
                 <p>Key scope information is displayed in a tooltip when hovering over an item in the
                     <uicontrol>DITA Maps Manager</uicontrol></p>
               </entry>
               <entry>Partially implemented (Various issues may still be encountered)</entry>
             </row>
             <row>
-              <entry>Branch filtering</entry>
+              <entry><xref href="dita-branch-filtering.dita#dita-branch-filtering">Branch
+                  filtering</xref></entry>
               <entry>
-                <p>Display, create, and edit <term>ditavalref</term> elements</p>
+                <p>Display, create, and edit <i>ditavalref</i> elements</p>
               </entry>
               <entry>Partially implemented (Various issues may still be encountered)</entry>
             </row>
             <row>
               <entry>Key-based cross deliverable addressing</entry>
               <entry>
-                <p>Special display for references to DITA maps with <b>scope="peer"</b> and a
-                  defined <b>keyscope</b></p>
+                <p>Special display for references to <term>DITA maps</term> with <b>scope="peer"</b>
+                  and a defined <b>keyscope</b></p>
                 <p>Gather and present keys from peer maps</p>
               </entry>
               <entry>Not implemented.</entry>
@@ -124,16 +126,15 @@
               <entry>Implemented</entry>
             </row>
             <row>
-              <entry>Various table attributes (<codeph>orientation</codeph>,
-                  <codeph>rotation</codeph>, <codeph>scope</codeph>, and <codeph>headers</codeph> on
-                cells)</entry>
+              <entry>Various table attributes (<i>orientation</i>, <i>rotation</i>, <i>scope</i>,
+                and <i>headers</i> on cells)</entry>
               <entry>Not implemented in the Table Properties action support. However, attributes can
                 be changed from the Attributes view</entry>
               <entry>Not implemented</entry>
             </row>
             <row>
-              <entry>New Map <codeph>topicref</codeph> attributes (<codeph>cascade</codeph>,
-                  <codeph>deliveryTarget</codeph>)</entry>
+              <entry>New Map <i>topicref</i> attributes (<i>cascade</i>,
+                <i>deliveryTarget</i>)</entry>
               <entry>Allow setting new attributes, propose proper values for them</entry>
               <entry>Implemented</entry>
             </row>
@@ -142,9 +143,12 @@
       </table></p>
   </body>
   <related-links>
-    <link href="https://www.oxygenxml.com/demo/DITA_13.html" format="html" scope="external">
-      <linktext>Watch our DITA 1.3 video tutorial for more information about key scopes and branch
-        filtering.</linktext>
-    </link>
+    <linklist>
+      <title>Related Information:</title>
+      <link format="html" href="https://www.oxygenxml.com/demo/DITA_13.html" scope="external">
+        <linktext>Watch our DITA 1.3 video tutorial for more information about key scopes and branch
+          filtering.</linktext>
+      </link>
+    </linklist>
   </related-links>
 </topic>
