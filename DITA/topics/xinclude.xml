@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b>XINCLUDE content that has also a conref with filepath <filepath conref="2.1/filepath.xml#filepath"/></b>
