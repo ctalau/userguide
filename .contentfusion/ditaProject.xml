@@ -6,4 +6,10 @@
             <ditaval href="../DITA/ditaval/webauthor.ditaval"/>
         </profile>
     </context>
+    <publication id="pdf" transtype="pdf-css-html5"/>
+    <deliverable id="Web_Author_PDF-1698771559955" name="Web Author PDF">
+        <context idref="hJZhnLUEzjhkKHG"/>
+        <output href="pdf-output"/>
+        <publication idref="pdf"/>
+    </deliverable>
 </project>
