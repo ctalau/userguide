@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <project xmlns="https://www.dita-ot.org/project">
+    <context id="ALoWYKmFFcWHuPW" name="Editor">
+        <input href="../DITA/UserManual.ditamap"/>
+        <profile>
+            <ditaval href="../DITA/ditaval/editor.ditaval"/>
+        </profile>
+    </context>
     <context id="hJZhnLUEzjhkKHG" name="Web Author Manual">
         <input href="../DITA/UserManual.ditamap"/>
         <profile>
