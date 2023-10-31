@@ -18,4 +18,9 @@
         <output href="pdf-output"/>
         <publication idref="pdf"/>
     </deliverable>
+    <deliverable id="Editor_Manual-1698772359373" name="Editor Manual">
+        <context idref="ALoWYKmFFcWHuPW"/>
+        <output href="pdf-output"/>
+        <publication idref="pdf"/>
+    </deliverable>
 </project>
