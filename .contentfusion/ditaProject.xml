@@ -16,6 +16,7 @@
         </profile>
     </context>
     <publication id="pdf" transtype="pdf-css-html5"/>
+    <publication id="webhelp" transtype="webhelp-responsive"/>
     <deliverable id="Web_Author_PDF-1698771559955" name="Web Author PDF">
         <context idref="hJZhnLUEzjhkKHG"/>
         <output href="pdf-output"/>
@@ -25,5 +26,10 @@
         <context idref="ALoWYKmFFcWHuPW"/>
         <output href="pdf-output"/>
         <publication idref="pdf"/>
+    </deliverable>
+    <deliverable id="Web_Author_web-1701271940653" name="Web Author web">
+        <context idref="hJZhnLUEzjhkKHG"/>
+        <output href="webhelp-output"/>
+        <publication idref="webhelp"/>
     </deliverable>
 </project>
