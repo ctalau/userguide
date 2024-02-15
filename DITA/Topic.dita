@@ -3,6 +3,8 @@
 <topic id="topic_p2b_kql_flb">
     <title>Add T</title>
     <body>
-        <p>This is a topic that I am writing for you to review</p>
+        <p>This is a topic that I am
+            <?oxy_comment_start author="Cristian Talau" timestamp="20240215T141449+0000" comment="some comments"?>writing<?oxy_comment_end?>
+            for you to review</p>
     </body>
 </topic>
