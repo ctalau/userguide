@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="topic_p2b_kql_flb">
-    <title><?oxy_comment_start author="Tamilselvan Ponnusamy" timestamp="20240215T141611+0000" comment="Add title."?>Add
-        Title<?oxy_comment_end?></title>
+    <title>Add
+        Title</title>
     <body>
-        <p>This is a topic that I am
-            <?oxy_comment_start author="Cristian Talau" timestamp="20240215T141449+0000" comment="some comments"?>writing<?oxy_comment_end?>
-            for you to review my
-            change<?oxy_comment_start author="Tamilselvan Ponnusamy" timestamp="20240215T141627+0000" comment="Add period (.) at the end of each step." id="sly_ngf_l1c"?><?oxy_comment_start author="Cristian Talau" timestamp="20240215T141636+0000" parentID="sly_ngf_l1c" comment="Sure." mid="3"?>.<?oxy_comment_end mid="3"?><?oxy_comment_end?></p>
+        <p>This is a topic that I am writing for you to review my change.</p>
+        <p>
+            <ul id="ul_yvs_wgg_q1c">
+                <li>First install the server</li>
+                <li>Then do another step. </li>
+            </ul>
+        </p>
     </body>
 </topic>
