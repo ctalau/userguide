@@ -6,6 +6,12 @@
         <p>This is a topic that I am writing for you to review my
             change.<?oxy_comment_start author="Tamilselvan Ponnusamy" timestamp="20240304T143902+0000" comment="Add step by step instructions for installing the application.
 
-How to integrate Git with Content Fusion."?></p><?oxy_comment_end?>
+How to integrate Git with Content Fusion." flag="done"?></p><?oxy_comment_end?>
+        <p>
+            <ul id="ul_yvs_wgg_q1c">
+                <li>First install the server</li>
+                <li>Then do another step.</li>
+            </ul>
+        </p>
     </body>
 </topic>
