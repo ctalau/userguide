@@ -1,1 +1,14 @@
-<root>asdasdas</root>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_p2b_kql_flb">
+    <title>Add Title</title>
+    <body>
+        <p>This is a topic that I am writing for you to review my change.<ph keyref="product"/></p>
+        <p>
+            <ul id="ul_yvs_wgg_q1c">
+                <li>First install the server</li>
+                <li>Then do another step.  asd asd </li>
+            </ul>
+        </p>
+    </body>
+</topic>
