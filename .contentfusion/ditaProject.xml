@@ -18,6 +18,7 @@
     <publication id="pdf" transtype="pdf-css-html5"/>
     <publication id="webhelp" transtype="webhelp-responsive"/>
     <deliverable id="Web_Author_PDF-1698771559955" name="Web Author PDF">
+        <?enableEditInWorkspace?>
         <context idref="hJZhnLUEzjhkKHG"/>
         <output href="pdf-output"/>
         <publication idref="pdf"/>
