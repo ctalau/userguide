@@ -32,6 +32,8 @@
     <deliverable id="Web_Author_web-1701271940653" name="Web Author web">
         <context idref="hJZhnLUEzjhkKHG"/>
         <output href="webhelp-output"/>
-        <publication idref="webhelp"/>
+        <publication idref="webhelp">
+            <param name="webhelp.publishing.template" value="cf://templates/Oxygen"/>
+        </publication>
     </deliverable>
 </project>
