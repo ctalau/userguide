@@ -27,7 +27,9 @@
     <deliverable id="Editor_Manual-1698772359373" name="Editor Manual">
         <context idref="ALoWYKmFFcWHuPW"/>
         <output href="pdf-output"/>
-        <publication idref="pdf"/>
+        <publication idref="pdf">
+            <param name="pdf.publishing.template" value="cf://templates/Oxygen"/>
+        </publication>
     </deliverable>
     <deliverable id="Web_Author_web-1701271940653" name="Web Author web">
         <context idref="hJZhnLUEzjhkKHG"/>
