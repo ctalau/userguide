@@ -18,10 +18,11 @@
     <publication id="pdf" transtype="pdf-css-html5"/>
     <publication id="webhelp" transtype="webhelp-responsive"/>
     <deliverable id="Web_Author_PDF-1698771559955" name="Web Author PDF">
-        <?enableEditInWorkspace?>
         <context idref="hJZhnLUEzjhkKHG"/>
         <output href="pdf-output"/>
-        <publication idref="pdf"/>
+        <publication idref="pdf">
+            <param name="pdf.publishing.template" value="cf://templates/Oxygen"/>
+        </publication>
     </deliverable>
     <deliverable id="Editor_Manual-1698772359373" name="Editor Manual">
         <context idref="ALoWYKmFFcWHuPW"/>
