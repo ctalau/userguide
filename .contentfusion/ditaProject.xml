@@ -21,7 +21,7 @@
         <context idref="hJZhnLUEzjhkKHG"/>
         <output href="pdf-output"/>
         <publication idref="pdf">
-            <param name="pdf.publishing.template" value=".contentfusion/templates/Template-12"/>
+            <param href="templates/Template-12" name="pdf.publishing.template"/>
         </publication>
     </deliverable>
     <deliverable id="Editor_Manual-1698772359373" name="Editor Manual">
