@@ -28,7 +28,7 @@
         <context idref="ALoWYKmFFcWHuPW"/>
         <output href="pdf-output"/>
         <publication idref="pdf">
-            <param name="pdf.publishing.template" value="cf://templates/Oxygen"/>
+            <param href="cf://templates/Oxygen" name="pdf.publishing.template"/>
         </publication>
     </deliverable>
     <deliverable id="Web_Author_web-1701271940653" name="Web Author web">
