@@ -35,7 +35,7 @@
         <context idref="hJZhnLUEzjhkKHG"/>
         <output href="webhelp-output"/>
         <publication idref="webhelp">
-            <param name="webhelp.publishing.template" value=".contentfusion/templates/Template-12"/>
+            <param href="templates/Template-12" name="webhelp.publishing.template"/>
         </publication>
     </deliverable>
 </project>
