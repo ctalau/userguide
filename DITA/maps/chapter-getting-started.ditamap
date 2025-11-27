@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map id="chapter.getting-started" title="Getting Started">
+<map id="chapter.getting-started" title="Getting Started as asd a">
   <topicref href="../topics/getting-started-intro.dita" collection-type="sequence">
     <topicmeta>
       <shortdesc>Information and resources to help you get started using <ph keyref="product"/> as
