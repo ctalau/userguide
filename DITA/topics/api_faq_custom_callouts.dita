@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="api_faq_custom_callouts">
-  <title>Add Custom Callouts</title>
+  <title>Add Custom Callouts to the Review Panel</title>
   <body>
     <section id="question">
       <title>Question</title>
@@ -13,7 +13,7 @@
     </section>
     <section id="answer">
       <title>Answer</title>
-      <p>The Plugins API allows you to set a <apiname>ValidationProblemsFilter</apiname> that gets
+      <p>The Plugins SDK allows you to set a <apiname>ValidationProblemsFilter</apiname> that gets
         notified when automatic validation errors are available. Then you can map each of the
         problems to an offset range in the <uicontrol>Author</uicontrol> mode using the API
           <apiname>WSTextBasedEditorPage.getStartEndOffsets(DocumentPositionedInfo)</apiname>. For
