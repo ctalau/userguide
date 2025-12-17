@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="Update_procedure">
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="Update_procedure">
   <title>Upgrading</title>
   <prolog>
     <metadata>
@@ -9,29 +9,24 @@
       </keywords>
     </metadata>
   </prolog>
-  <body>
-    <p id="p_vlq_dgk_54b">Every new version of <ph keyref="webappProduct"/> comes with a lot of new features,
+  <taskbody><context><p id="p_vlq_dgk_54b">Every new version of <ph keyref="webappProduct"/> comes with a lot of new features,
       improvements, bug fixes, and security upgrades. Therefore, you should always use the latest
       version. However, you may want to perform some internal tests before allowing the users to use
       the new features. For example, you may want to disable some of the new features to keep the UI
-      simple or to tweak some of the settings.</p>
-    <p id="p_wlq_dgk_54b">It is recommended that you make a separate deployment of the new version on a different VM,
-      perform some acceptance tests, and then switch all of your users to the new deployment.</p>
-    <p id="p_xlq_dgk_54b">To upgrade <ph keyref="webappProduct"/>, follow these steps:</p>
-    <ol id="ol_tr4_wlz_hw">
-      <li id="li_ylq_dgk_54b">Deploy the new version of <ph keyref="webappProduct"/> on a separate virtual machine and
+      simple or to tweak some of the settings.</p><p id="p_wlq_dgk_54b">It is recommended that you make a separate deployment of the new version on a different VM,
+      perform some acceptance tests, and then switch all of your users to the new deployment.</p><p id="p_xlq_dgk_54b">To upgrade <ph keyref="webappProduct"/>, follow these steps:</p></context><steps id="ol_tr4_wlz_hw">
+      <step id="li_ylq_dgk_54b"><cmd>Deploy the new version of <ph keyref="webappProduct"/> on a separate virtual machine and
         connect it to your existing license server. The two deployments will work in parallel, both
-        using the same license pool.</li>
-      <li id="li_zlq_dgk_54b">It might be necessary to update your license key. If you receive an error message
+        using the same license pool.</cmd></step>
+      <step id="li_zlq_dgk_54b"><cmd>It might be necessary to update your license key. If you receive an error message
         regarding the license key version, follow <xref
           href="https://www.oxygenxml.com/doc/ug-editor/topics/replace-floating-license.html"
           format="html" scope="external">this procedure</xref>. Your existing <ph
           keyref="webappProduct"/> deployment will continue to work with a license for the newer
-        version.</li>
-      <li id="li_amq_dgk_54b">Tweak the settings for the new version to suit your needs.</li>
-      <li id="li_bmq_dgk_54b">Switch all of the users to the new version. This can be achieved either by changing the
+        version.</cmd></step>
+      <step id="li_amq_dgk_54b"><cmd>Tweak the settings for the new version to suit your needs.</cmd></step>
+      <step id="li_bmq_dgk_54b"><cmd>Switch all of the users to the new version. This can be achieved either by changing the
         DNS entry or configuring the <xref href="webapp-loadbalancing.dita#webapp-loadbalancing"
-          >Load Balancer</xref> to use the new deployment.</li>
-    </ol>
-  </body>
-</topic>
+          >Load Balancer</xref> to use the new deployment.</cmd></step>
+    </steps></taskbody>
+</task>
