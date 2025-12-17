@@ -40,11 +40,6 @@
               <entry>100%</entry>
             </row>
             <row>
-              <entry>Publishing</entry>
-              <entry>PDF preview</entry>
-              <entry>PDF, WebHelp, and many other formats</entry>
-            </row>
-            <row>
               <entry>Advanced XML features</entry>
               <entry>No</entry>
               <entry>Yes (search by XPath, refactoring actions)</entry>
